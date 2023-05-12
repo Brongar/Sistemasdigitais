@@ -1,0 +1,29 @@
+*PARAMETROS
+.include 32nm_HP.pm
+
+* Declarando Fontes de tensão
+Vvdd vdd gnd 1
+
+* Declaração das fontes
+Vfonte fonte gnd PWL (0ns 1 1ns 1...)
+
+
+*Quanto maior L, menor a corrente
+*Quanto maior W, maior a corrente
+*NMOS tem dificuldade para passar o valor 1
+*PMOS tem dificuldade para passar o valor 0
+
+* Declarando o circuito - Transistores
+
+Mnmos fonte controleA saida gnd NMOS W=100n L=32n
+
+Mpmos fonte controleB saida vdd PMOS W=100n L=32n
+
+
+
+* Simulação Transiente de 8ns com passo de 0.1ns
+
+.tran 0.01ns 8ns
+
+* Fim do Arquivo SPICE
+.end
