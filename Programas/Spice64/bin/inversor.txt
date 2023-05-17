@@ -1,0 +1,29 @@
+*INVERSOR COM ATRASOS 
+
+
+*PARAMETROS 
+.include 32nm_HP.pm
+
+
+* Declarando Fontes de tensão
+Vvdd vdd gnd 1 
+
+
+* Declaração das fontes
+Va a gnd PWL (0n 0 10n 0 10.01n 1 15n 1 15.01n 0)
+
+
+* Declarando o circuito 
+Mp1 vdd a inv vdd PMOS w=140n l=32n 
+Mn1 inv a gnd gnd NMOS w=70n l=32n 
+
+.measure tran tphl trig v(a) val='0.5*1.0' rise=1 targ v(inv) val='0.5*1.0' fall=1 
+.measure tran tplh trig v(a) val='0.5*1.0' fall=1 targ v(inv) val='0.5*1.0' rise=1 
+
+
+* Simulação Transiente de 20ns com passo de 0.01ns 
+.tran 0.01ns 20ns 
+
+
+* Fim do Arquivo SPICE
+.end
