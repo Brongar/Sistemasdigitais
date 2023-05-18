@@ -5,8 +5,11 @@
 Vvdd vdd gnd 1
 
 * Declaração das fontes
-Va a gnd PWL (0ns 0 4ns 0 4.01ns 1 8ns 1)
-Vb b gnd PWL (0ns 0 2ns 0 2.01ns 1 4ns 1 4.01ns 0 6ns 0 6.01ns 1 8ns 1)
+*Va a gnd PWL (0ns 0 4ns 0 4.01ns 1 8ns 1)
+*Vb b gnd PWL (0ns 0 2ns 0 2.01ns 1 4ns 1 4.01ns 0 6ns 0 6.01ns 1 8ns 1)
+
+Va a gnd PWL (0ns 1 2ns 1 2.01ns 0 4ns 0 4.01ns 1 10ns 1)
+Vb b gnd PWL (0ns 1 6ns 1 6.01ns 0 8ns 0 8.01ns 1 10ns 1)
 
 *Quanto maior L, menor a corrente
 *Quanto maior W, maior a corrente
@@ -23,14 +26,21 @@ Mp2 vdd b out vdd PMOS W=100n L=32n
 
 *Tem que comprar cada entrada com a saida??? ou entrada "a" com entrada "b", depois "b" com "out"?
 
-.measure tran delay_a trig v(a) val='0.5*1.0' rise=1 targ v(out) val='0.5*1.0' rise=0
-.measure tran delay_b trig v(b) val='0.5*1.0' rise=1 targ v(out) val='0.5*1.0' rise=0
+.measure tran delay_a1 trig v(a) val='0.5*1.0' fall=1 targ v(out) val='0.5*1.0' rise=1
+.measure tran delay_a2 trig v(a) val='0.5*1.0' rise=1 targ v(out) val='0.5*1.0' fall=1
+
+.measure tran delay_b1 trig v(b) val='0.5*1.0' fall=1 targ v(out) val='0.5*1.0' rise=2
+.measure tran delay_b2 trig v(b) val='0.5*1.0' rise=1 targ v(out) val='0.5*1.0' fall=2
 
 
 
-* Simulação Transiente de 8ns com passo de 0.1ns
+* Simulação Transiente de 10ns com passo de 0.1ns
 
-.tran 0.01ns 8ns
+.tran 0.01ns 10ns
+
+.control
+*set color0=white
+.endc
 
 * Fim do Arquivo SPICE
 .end
