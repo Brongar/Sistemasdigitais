@@ -1,0 +1,91 @@
+*Bruna dos Santos Freitas - 132780
+* As considerações finais estão no final do arquivo :)
+
+
+.include 32nm_HP.pm
+
+* Declaração das fontes
+Vvdd vdd gnd 1
+
+*Montando as pwls de validação
+*Vx x gnd PWL (0ns 0 8ns 0 8.01ns 1 16ns 1)
+*Vy y gnd PWL (0ns 0 4ns 0 4.01ns 1 8ns 1 8.01ns 0 12ns 0 12.01ns 1 16ns 1)
+*Vz z gnd PWL (0ns 0 2ns 0 2.01ns 1 4ns 1 4.01ns 0 6ns 0 6.01ns 1 8ns 1 8.01ns 0 10ns 0 10.01ns 1 12ns 1 12.01ns 0 14ns 0 14.01ns 1 16ns 1)
+
+
+
+*com novos estimulos
+Va x gnd PWL (0ns 1 9ns 1 9.01ns 0 12ns 0 12.01ns 1 21ns 1 21.01ns 0 24ns 0 24.01ns 1 30ns 1 30.01ns 0 33ns 0 33.01ns 1 36ns 1)
+Vb y gnd PWL (0ns 1 3ns 1 3.01ns 0 18ns 0 18.01ns 1 36ns 1)
+Vc z gnd PWL (0ns 0 6ns 0 6.01ns 1 15ns 1 15.01ns 0 27ns 0 27.01ns 1 36ns 1)
+
+
+*Atrasos com W=200n:
+*delay_x_hl1         =  6.032296e-12  
+*delay_x_lh1         =  7.632982e-12 
+*delay_x_hl2         =  6.333160e-12 
+*delay_x_lh2         =  8.228702e-12
+*delay_x_hl3         =  6.001508e-12 
+*delay_x_lh3         =  6.683953e-12 
+*delay_y_hl1         =  1.360889e-11 
+*delay_y_lh1         =  8.432482e-12 
+*delay_z_lh1         =  7.995408e-12 
+*delay_z_hl1         =  1.237311e-11 
+
+
+*Atrasos com W=1000 no M1 e no M5:
+*delayx_hl1         =  3.478150e-12 
+*delayx_lh1         =  1.060692e-11 
+*delayx_hl2         =  3.587478e-12 
+*delayx_lh2         =  8.791837e-12 
+*delayx_hl3         =  3.458119e-12 
+*delayx_lh3         =  8.280322e-12
+*delayy_hl1         =  1.968746e-11 
+*delayy_lh1         =  7.603827e-12 
+*delayz_lh1         =  1.047327e-11 
+*delayz_hl1         =  1.748521e-11 
+
+*Declarando o circuito com seus transistores
+*PMOS
+M1 vdd x inv vdd PMOS W=1000n L=32n
+
+M2 vdd inv out vdd PMOS W=200n L=32n
+
+M3 vdd y w vdd PMOS W=200n L=32n
+
+M4 w z inv vdd PMOS W=200n L=32n
+
+*NMOS
+M5 gnd y l gnd NMOS W=1000n L=32n
+
+M6 l x inv gnd NMOS W=200n L=32n
+
+M7 out inv gnd gnd NMOS W=200n L=32n
+
+M8 gnd z l gnd NMOS W=200n L=32n
+
+* a seguir, o calculo do atraso nas entradas
+.measure tran delay_x_HL1 trig v(x) val='0.5*1.0' fall=1 targ v(out) val='0.5*1.0' fall=2
+.measure tran delay_x_LH1 trig v(x) val='0.5*1.0' rise=1 targ v(out) val='0.5*1.0' rise=2
+
+.measure tran delay_x_HL2 trig v(x) val='0.5*1.0' fall=2 targ v(out) val='0.5*1.0' fall=4
+.measure tran delay_x_LH2 trig v(x) val='0.5*1.0' rise=2 targ v(out) val='0.5*1.0' rise=4
+
+.measure tran delay_x_HL3 trig v(x) val='0.5*1.0'  fall=3 targ v(out)  val='0.5*1.0' fall=5
+.measure tran delay_x_LH3 trig v(x) val='0.5*1.0'  rise=3 targ v(out) val='0.5*1.0' rise=5
+
+.measure tran delay_y_HL1 trig v(y) val='0.5*1.0' fall=1 targ v(out) val='0.5*1.0' fall=1
+.measure tran delay_y_LH1 trig v(y) val='0.5*1.0' rise=1 targ v(out) val='0.5*1.0' rise=3
+
+.measure tran delay_z_LH1 trig v(z) val='0.5*1.0' rise=1 targ v(out) val='0.5*1.0' rise=1
+.measure tran delay_z_HL1 trig v(z) val='0.5*1.0' fall=1 targ v(out) val='0.5*1.0' fall=3
+
+* reflexões:
+* Percebe-se que ao aumentar o valor de w, a grande parte dos atrasos diminuiram, ou seja, aumentando 
+* a largura do transistor sua resistência diminuiu e sua capacidade de condução de corrente aumentou,
+* diminuindo o atraso.No entanto, é importante considerar que o aumento da largura do transistor também 
+* pode aumentar a área ocupada pelo circuito e o consumo de energia.
+
+.tran 0.01ns 36ns
+
+.end

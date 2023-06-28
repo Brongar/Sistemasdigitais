@@ -93,7 +93,7 @@ Mcn1 gnd c z gnd NMOS W=100n L=32n
 
 
 * Simulação Transiente de 24ns com passo de 0.01ns
-.tran 0.02ns 24ns
+.tran 0.01ns 24ns
 
 * Fim do Arquivo SPICE
 .end
