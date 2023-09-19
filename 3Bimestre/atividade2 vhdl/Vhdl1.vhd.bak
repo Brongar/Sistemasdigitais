@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity name_of_entity is
+	port (
+			IN1 : in std_logic;
+			IN2 : in std_logic;
+			out1: out std_logic);
+end entity name_of_entity;
+
+architecture name_of_architecture of name_of_entity is
+
+begin
+	OUT1 <= IN1 and IN2;
+end architecture name_of_architecture;
