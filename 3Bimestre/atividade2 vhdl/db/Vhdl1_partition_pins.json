@@ -12,6 +12,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "aMenorB",
+					"strict" : false
+				},
+				{
 					"name" : "A",
 					"strict" : false
 				},

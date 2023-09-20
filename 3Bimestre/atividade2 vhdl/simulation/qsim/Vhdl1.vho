@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
--- DATE "09/19/2023 20:59:56"
+-- DATE "09/20/2023 16:04:20"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -38,8 +38,9 @@ ENTITY 	Vhdl1 IS
 	B : IN std_logic;
 	C : IN std_logic;
 	D : IN std_logic;
-	aMaiorB : BUFFER std_logic;
-	aEqualsB : BUFFER std_logic
+	aMaiorB : OUT std_logic;
+	aEqualsB : OUT std_logic;
+	aMenorB : OUT std_logic
 	);
 END Vhdl1;
 
@@ -59,14 +60,17 @@ SIGNAL ww_C : std_logic;
 SIGNAL ww_D : std_logic;
 SIGNAL ww_aMaiorB : std_logic;
 SIGNAL ww_aEqualsB : std_logic;
+SIGNAL ww_aMenorB : std_logic;
 SIGNAL \aMaiorB~output_o\ : std_logic;
 SIGNAL \aEqualsB~output_o\ : std_logic;
+SIGNAL \aMenorB~output_o\ : std_logic;
 SIGNAL \A~input_o\ : std_logic;
 SIGNAL \B~input_o\ : std_logic;
 SIGNAL \D~input_o\ : std_logic;
 SIGNAL \C~input_o\ : std_logic;
 SIGNAL \aMaiorB~0_combout\ : std_logic;
 SIGNAL \aEqualsB~0_combout\ : std_logic;
+SIGNAL \aMenorB~0_combout\ : std_logic;
 SIGNAL \ALT_INV_aEqualsB~0_combout\ : std_logic;
 
 BEGIN
@@ -77,6 +81,7 @@ ww_C <= C;
 ww_D <= D;
 aMaiorB <= ww_aMaiorB;
 aEqualsB <= ww_aEqualsB;
+aMenorB <= ww_aMenorB;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
@@ -103,6 +108,17 @@ PORT MAP (
 	i => \ALT_INV_aEqualsB~0_combout\,
 	devoe => ww_devoe,
 	o => \aEqualsB~output_o\);
+
+\aMenorB~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \aMenorB~0_combout\,
+	devoe => ww_devoe,
+	o => \aMenorB~output_o\);
 
 \A~input\ : cycloneive_io_ibuf
 -- pragma translate_off
@@ -176,9 +192,27 @@ PORT MAP (
 	datad => \D~input_o\,
 	combout => \aEqualsB~0_combout\);
 
+\aMenorB~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \aMenorB~0_combout\ = (\C~input_o\ & (((\D~input_o\ & !\B~input_o\)) # (!\A~input_o\))) # (!\C~input_o\ & (\D~input_o\ & (!\B~input_o\ & !\A~input_o\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100010101110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \C~input_o\,
+	datab => \D~input_o\,
+	datac => \B~input_o\,
+	datad => \A~input_o\,
+	combout => \aMenorB~0_combout\);
+
 ww_aMaiorB <= \aMaiorB~output_o\;
 
 ww_aEqualsB <= \aEqualsB~output_o\;
+
+ww_aMenorB <= \aMenorB~output_o\;
 END structure;
 
 
