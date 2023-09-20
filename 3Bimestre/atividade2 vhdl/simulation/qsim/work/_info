@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Andrew/Documents/GitHub/Sistemasdigitais/3Bimestre/atividade2 vhdl/simulation/qsim
 Evhdl1
-Z1 w1695084478
+Z1 w1695167996
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -21,13 +21,13 @@ Z8 8Vhdl1.vho
 Z9 FVhdl1.vho
 l0
 L35
-VI^k1ZLY2Ba`40QBkCP2140
-!s100 2UlJDo72eb4UAJCGlEZU70
+V0B:2K2`X18VQ;h=0CiE8T1
+!s100 gzmGBDdh?YLT8:K`FI1ed2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1695084481
+Z11 !s110 1695167999
 !i10b 1
-Z12 !s108 1695084481.000000
+Z12 !s108 1695167999.000000
 Z13 !s90 -work|work|Vhdl1.vho|
 Z14 !s107 Vhdl1.vho|
 !i113 1
@@ -40,11 +40,11 @@ R4
 R5
 R6
 R7
-DEx4 work 5 vhdl1 0 22 I^k1ZLY2Ba`40QBkCP2140
-l61
-L43
-VK5E8f;WH9@G7MNF[]_S^M0
-!s100 1OPQjYEaHc;:=bElnJh1k2
+DEx4 work 5 vhdl1 0 22 0B:2K2`X18VQ;h=0CiE8T1
+l72
+L46
+V0b<?ccT^k`VKCn^H58FZf1
+!s100 HES^k@5:neIo1SHPQ[8Dm3
 R10
 32
 R11
@@ -56,12 +56,12 @@ R14
 R15
 R16
 Evhdl1_vhd_vec_tst
-Z17 w1695084477
+Z17 w1695167995
 R5
 R6
 R0
-Z18 8Waveform.vwf.vht
-Z19 FWaveform.vwf.vht
+Z18 8Waveform4.vwf.vht
+Z19 FWaveform4.vwf.vht
 l0
 L32
 VPKHcAZH`WA`b<NdiFK]DB3
@@ -71,19 +71,19 @@ R10
 R11
 !i10b 1
 R12
-Z20 !s90 -work|work|Waveform.vwf.vht|
-Z21 !s107 Waveform.vwf.vht|
+Z20 !s90 -work|work|Waveform4.vwf.vht|
+Z21 !s107 Waveform4.vwf.vht|
 !i113 1
 R15
 R16
 Avhdl1_arch
 R5
 R6
-DEx4 work 17 vhdl1_vhd_vec_tst 0 22 PKHcAZH`WA`b<NdiFK]DB3
-l47
+Z22 DEx4 work 17 vhdl1_vhd_vec_tst 0 22 PKHcAZH`WA`b<NdiFK]DB3
+l53
 L34
-V`>GK61UfR8R1cBmUhYh712
-!s100 7?h0^AW4VOD9SM@gbG1O82
+Z23 V26WRBB42Kki1efQhl1]6e3
+Z24 !s100 UmI>0Wbcn7M4C?kA]1YAa1
 R10
 32
 R11

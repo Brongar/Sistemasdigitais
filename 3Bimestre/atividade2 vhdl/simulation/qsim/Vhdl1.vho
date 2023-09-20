@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
--- DATE "09/18/2023 21:47:58"
+-- DATE "09/19/2023 20:59:56"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -34,9 +34,12 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY 	Vhdl1 IS
     PORT (
-	IN1 : IN std_logic;
-	IN2 : IN std_logic;
-	OUT1 : OUT std_logic
+	A : IN std_logic;
+	B : IN std_logic;
+	C : IN std_logic;
+	D : IN std_logic;
+	aMaiorB : BUFFER std_logic;
+	aEqualsB : BUFFER std_logic
 	);
 END Vhdl1;
 
@@ -50,69 +53,132 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_IN1 : std_logic;
-SIGNAL ww_IN2 : std_logic;
-SIGNAL ww_OUT1 : std_logic;
-SIGNAL \OUT1~output_o\ : std_logic;
-SIGNAL \IN1~input_o\ : std_logic;
-SIGNAL \IN2~input_o\ : std_logic;
-SIGNAL \OUT1~0_combout\ : std_logic;
+SIGNAL ww_A : std_logic;
+SIGNAL ww_B : std_logic;
+SIGNAL ww_C : std_logic;
+SIGNAL ww_D : std_logic;
+SIGNAL ww_aMaiorB : std_logic;
+SIGNAL ww_aEqualsB : std_logic;
+SIGNAL \aMaiorB~output_o\ : std_logic;
+SIGNAL \aEqualsB~output_o\ : std_logic;
+SIGNAL \A~input_o\ : std_logic;
+SIGNAL \B~input_o\ : std_logic;
+SIGNAL \D~input_o\ : std_logic;
+SIGNAL \C~input_o\ : std_logic;
+SIGNAL \aMaiorB~0_combout\ : std_logic;
+SIGNAL \aEqualsB~0_combout\ : std_logic;
+SIGNAL \ALT_INV_aEqualsB~0_combout\ : std_logic;
 
 BEGIN
 
-ww_IN1 <= IN1;
-ww_IN2 <= IN2;
-OUT1 <= ww_OUT1;
+ww_A <= A;
+ww_B <= B;
+ww_C <= C;
+ww_D <= D;
+aMaiorB <= ww_aMaiorB;
+aEqualsB <= ww_aEqualsB;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\ALT_INV_aEqualsB~0_combout\ <= NOT \aEqualsB~0_combout\;
 
-\OUT1~output\ : cycloneive_io_obuf
+\aMaiorB~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \OUT1~0_combout\,
+	i => \aMaiorB~0_combout\,
 	devoe => ww_devoe,
-	o => \OUT1~output_o\);
+	o => \aMaiorB~output_o\);
 
-\IN1~input\ : cycloneive_io_ibuf
+\aEqualsB~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \ALT_INV_aEqualsB~0_combout\,
+	devoe => ww_devoe,
+	o => \aEqualsB~output_o\);
+
+\A~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_IN1,
-	o => \IN1~input_o\);
+	i => ww_A,
+	o => \A~input_o\);
 
-\IN2~input\ : cycloneive_io_ibuf
+\B~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_IN2,
-	o => \IN2~input_o\);
+	i => ww_B,
+	o => \B~input_o\);
 
-\OUT1~0\ : cycloneive_lcell_comb
+\D~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_D,
+	o => \D~input_o\);
+
+\C~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_C,
+	o => \C~input_o\);
+
+\aMaiorB~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OUT1~0_combout\ = (\IN1~input_o\ & \IN2~input_o\)
+-- \aMaiorB~0_combout\ = (\A~input_o\ & (((\B~input_o\ & !\D~input_o\)) # (!\C~input_o\))) # (!\A~input_o\ & (\B~input_o\ & (!\D~input_o\ & !\C~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100010001000",
+	lut_mask => "0000100010101110",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \IN1~input_o\,
-	datab => \IN2~input_o\,
-	combout => \OUT1~0_combout\);
+	dataa => \A~input_o\,
+	datab => \B~input_o\,
+	datac => \D~input_o\,
+	datad => \C~input_o\,
+	combout => \aMaiorB~0_combout\);
 
-ww_OUT1 <= \OUT1~output_o\;
+\aEqualsB~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \aEqualsB~0_combout\ = (\A~input_o\ & ((\B~input_o\ $ (\D~input_o\)) # (!\C~input_o\))) # (!\A~input_o\ & ((\C~input_o\) # (\B~input_o\ $ (\D~input_o\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110111111110110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \A~input_o\,
+	datab => \C~input_o\,
+	datac => \B~input_o\,
+	datad => \D~input_o\,
+	combout => \aEqualsB~0_combout\);
+
+ww_aMaiorB <= \aMaiorB~output_o\;
+
+ww_aEqualsB <= \aEqualsB~output_o\;
 END structure;
 
 

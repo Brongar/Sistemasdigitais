@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Vhdl1
-Mon Sep 18 21:47:58 2023
+Tue Sep 19 20:59:56 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Sep 18 21:47:58 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Sep 19 20:59:56 2023 ;
 ; Revision Name             ; Vhdl1                                 ;
 ; Top-level Entity Name     ; Vhdl1                                 ;
 ; Family                    ; Cyclone IV E                          ;
@@ -95,15 +95,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Mon Sep 18 21:47:57 2023
+    Info: Processing started: Tue Sep 19 20:59:56 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Andrew/Documents/GitHub/Sistemasdigitais/3Bimestre/atividade2 vhdl/simulation/qsim/" Vhdl1 -c Vhdl1
 Info (119006): Selected device EP4CE22F17C6 for design "Vhdl1"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Vhdl1.vho in folder "C:/Users/Andrew/Documents/GitHub/Sistemasdigitais/3Bimestre/atividade2 vhdl/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Mon Sep 18 21:47:58 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Tue Sep 19 20:59:56 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

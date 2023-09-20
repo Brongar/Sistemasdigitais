@@ -1,6 +1,27 @@
 |Vhdl1
-IN1 => OUT1.IN0
-IN2 => OUT1.IN1
-OUT1 <= OUT1.DB_MAX_OUTPUT_PORT_TYPE
+A => AplusC_not.IN0
+A => ac_not.IN0
+A => abcd.IN0
+A => ac_not_bd.IN0
+A => not_abcd.IN0
+A => not_ac_bd.IN0
+B => bd_not.IN0
+B => not_ac_bd.IN1
+B => abcd.IN1
+B => not_abcd.IN1
+B => ac_not_bd.IN1
+C => abcd.IN1
+C => ac_not_bd.IN1
+C => AplusC_not.IN1
+C => ac_not.IN1
+C => not_abcd.IN1
+C => not_ac_bd.IN1
+D => not_ac_bd.IN1
+D => abcd.IN1
+D => bd_not.IN1
+D => not_abcd.IN1
+D => ac_not_bd.IN1
+aMaiorB << aMaiorB.DB_MAX_OUTPUT_PORT_TYPE
+aEqualsB << aEqualsB.DB_MAX_OUTPUT_PORT_TYPE
 
 
