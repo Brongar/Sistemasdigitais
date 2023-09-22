@@ -1,0 +1,45 @@
+-- Bibliotecas
+library ieee;  -- Inclui a biblioteca padrão do IEEE para VHDL
+use ieee.std_logic_1164.all;  -- Usa a biblioteca std_logic_1164 para tipos e operações lógicas
+
+
+
+-- Definir entidade
+entity Condicionais is
+port (
+		A, B : in std_logic_vector(1 downto 0);
+		aMaiorB    : out std_logic;  -- Saída A>B
+		aEqualsB   : out std_logic;  -- Saída A=B
+		aMenorB    : out std_logic); -- Saída A=B
+		
+end Condicionais;  -- Fim da definição da entidade "Vhdl1"
+
+
+-- ##########  Arquitetura  ##########
+architecture circuit of Condicionais is
+signal s : std_logic_vector(3 downto 0);
+
+
+begin
+-- ######################################################################
+s <= A & B;
+
+--w-ith s select
+	--x<= '1' when "0000" | "0101" | "1010" | "1111";
+	--when others => '0';
+
+process (s)
+begin
+  case s is
+    when "0000" | "0101" | "1010" | "1111" =>
+      aEqualsB <= '1';
+    when others =>
+      aEqualsB <= '0';
+  end case;
+end process;
+
+
+end architecture circuit;  -- Fim da definição da arquitetura "circuit"
+
+
+

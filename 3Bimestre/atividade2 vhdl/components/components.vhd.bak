@@ -1,0 +1,65 @@
+-- Bibliotecas
+library ieee;  -- Inclui a biblioteca padrão do IEEE para VHDL
+use ieee.std_logic_1164.all;  -- Usa a biblioteca std_logic_1164 para tipos e operações lógicas
+
+-- Definir entidade
+entity Comparador is
+port (
+    A, B : in std_logic_vector(1 downto 0); -- 2 bits cada entrada
+    aMaiorB    : out std_logic;  -- Saída A>B
+    aEqualsB   : out std_logic;  -- Saída A=B
+    aMenorB    : out std_logic); -- Saída A<B
+end Comparador;
+
+-- Componente para comparação de 2 bits
+component Comparador2Bits is
+    port (
+        A, B : in std_logic_vector(1 downto 0);
+        Resultado : out std_logic_vector(2 downto 0)
+    );
+end component;
+
+-- ########## Arquitetura ##########
+architecture circuit of Comparador is
+signal s : std_logic_vector(3 downto 0); -- 4 bits
+
+begin
+-- ######################################################################
+s <= A & B;  -- Concatena os sinais A e B em s, criando um barramento de 4 bits
+
+-- Instanciando o componente Comparador2Bits para A > B
+Instancia_aMaiorB: Comparador2Bits
+    port map (
+        A => A,
+        B => B,
+        Resultado => (others => '0')
+    );
+aMaiorB <= Resultado(2);
+
+-- Instanciando o componente Comparador2Bits para A = B
+Instancia_aEqualsB: Comparador2Bits
+    port map (
+        A => A,
+        B => B,
+        Resultado => (others => '0')
+    );
+aEqualsB <= Resultado(2);
+
+-- Instanciando o componente Comparador2Bits para A < B
+Instancia_aMenorB: Comparador2Bits
+    port map (
+        A => A,
+        B => B,
+        Resultado => (others => '0')
+    );
+aMenorB <= Resultado(2);
+
+end architecture circuit;  -- Fim da definição da arquitetura "circuit"
+
+-- Componente para comparação de 2 bits
+architecture Comparador2Bits_Arq of Comparador2Bits is
+begin
+    Resultado <= (others => '0') when (A = B) else
+                 (others => '1') when (A > B) else
+                 (others => '0');
+end architecture Comparador2Bits_Arq;

@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Andrew/Documents/GitHub/Sistemasdigitais/3Bimestre/atividade2 vhdl/Condicionais/simulation/qsim
+Econdicionais
+Z1 w1695331579
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
+R0
+Z8 8Condicionais.vho
+Z9 FCondicionais.vho
+l0
+L35
+VgN9Ge_JORfn7=0oA9Wg<o1
+!s100 ikBQkXWGKOW>5EDleG[mB1
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1695331580
+!i10b 1
+Z12 !s108 1695331580.000000
+Z13 !s90 -work|work|Condicionais.vho|
+Z14 !s107 Condicionais.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 12 condicionais 0 22 gN9Ge_JORfn7=0oA9Wg<o1
+l72
+L45
+V=V9bP8Gii3CC6C45HU1XK2
+!s100 4Zkg=D4A]XGO1@2H_?6bE0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Econdicionais_vhd_vec_tst
+Z17 w1695331578
+R5
+R6
+R0
+Z18 8Waveform1.vwf.vht
+Z19 FWaveform1.vwf.vht
+l0
+L32
+VZL4PLCHS41_cPKQ^n@eRF1
+!s100 g<6Vk;2c06GX]GIi8V8Y;2
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform1.vwf.vht|
+Z21 !s107 Waveform1.vwf.vht|
+!i113 1
+R15
+R16
+Acondicionais_arch
+R5
+R6
+Z22 DEx4 work 24 condicionais_vhd_vec_tst 0 22 ZL4PLCHS41_cPKQ^n@eRF1
+l51
+L34
+VoQUO2nVflnBH[kFFFOlkI3
+!s100 03J@SbSX5V:m1b[SMf1?g3
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
