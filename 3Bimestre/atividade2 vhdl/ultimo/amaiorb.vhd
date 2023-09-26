@@ -8,7 +8,7 @@ port (
 		A0, B0 : in std_logic_vector(1 downto 0); --2bits cada entrada
 		saida0    : out std_logic);  -- Saída A>B
 		
-end amaiorb;  -- Fim da definição da entidade "Vhdl1"
+end amaiorb;  -- Fim da definição da entidade "amaiorb"
 
 -- ########## Arquitetura ##########
 architecture circuit of amaiorb is
@@ -16,7 +16,7 @@ architecture circuit of amaiorb is
 signal s : std_logic_vector(3 downto 0); --4bits
 
 begin
--- ######################################################################
+-- #################################################.+#####################
 s <= A0 & B0;  -- Concatena os sinais A e B em s, criando um barramento de 4 bits
 
 process (s)

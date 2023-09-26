@@ -8,7 +8,7 @@ port (
 		A2, B2 : in std_logic_vector(1 downto 0); --2bits cada entrada
 		saida2    : out std_logic);  -- Saída A>B
 		
-end aMenorb;  -- Fim da definição da entidade "Vhdl1"
+end aMenorb;  -- Fim da definição da entidade "aMenorb"
 
 -- ########## Arquitetura ##########
 architecture circuit of aMenorb is

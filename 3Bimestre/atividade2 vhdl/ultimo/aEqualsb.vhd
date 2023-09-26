@@ -8,7 +8,7 @@ port (
 		A1, B1 : in std_logic_vector(1 downto 0); --2bits cada entrada
 		saida1    : out std_logic);  -- Saída A>B
 		
-end aEqualsb;  -- Fim da definição da entidade "Vhdl1"
+end aEqualsb;  -- Fim da definição da entidade "aEqualsb"
 
 -- ########## Arquitetura ##########
 architecture circuit of aEqualsb is
