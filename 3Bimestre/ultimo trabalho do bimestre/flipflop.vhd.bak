@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity latchSR is
+    Port (
+        D, c2: in STD_LOGIC;
+        Q, Q_n: out STD_LOGIC
+    );
+end latchSR;
+
+--Comportamento da entidade
+architecture flipflop of latchSR is
+
+--sinais intermediarios
+signal sq ,sq_n : std_logic;
+
+begin
+    sq <= D nand sq_n;
+	 sq_n <= c2 nand sq;
+	 
+	 Q <= sq;
+	 Q_n <= sq_n;
+end flipflop;

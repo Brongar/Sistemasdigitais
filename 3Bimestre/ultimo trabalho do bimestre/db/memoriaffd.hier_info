@@ -1,0 +1,639 @@
+|final
+D[0] => conjuntoff:flipflop00.D8[0]
+D[0] => conjuntoff:flipflop01.D8[0]
+D[0] => conjuntoff:flipflop10.D8[0]
+D[0] => conjuntoff:flipflop11.D8[0]
+D[1] => conjuntoff:flipflop00.D8[1]
+D[1] => conjuntoff:flipflop01.D8[1]
+D[1] => conjuntoff:flipflop10.D8[1]
+D[1] => conjuntoff:flipflop11.D8[1]
+D[2] => conjuntoff:flipflop00.D8[2]
+D[2] => conjuntoff:flipflop01.D8[2]
+D[2] => conjuntoff:flipflop10.D8[2]
+D[2] => conjuntoff:flipflop11.D8[2]
+D[3] => conjuntoff:flipflop00.D8[3]
+D[3] => conjuntoff:flipflop01.D8[3]
+D[3] => conjuntoff:flipflop10.D8[3]
+D[3] => conjuntoff:flipflop11.D8[3]
+D[4] => conjuntoff:flipflop00.D8[4]
+D[4] => conjuntoff:flipflop01.D8[4]
+D[4] => conjuntoff:flipflop10.D8[4]
+D[4] => conjuntoff:flipflop11.D8[4]
+D[5] => conjuntoff:flipflop00.D8[5]
+D[5] => conjuntoff:flipflop01.D8[5]
+D[5] => conjuntoff:flipflop10.D8[5]
+D[5] => conjuntoff:flipflop11.D8[5]
+D[6] => conjuntoff:flipflop00.D8[6]
+D[6] => conjuntoff:flipflop01.D8[6]
+D[6] => conjuntoff:flipflop10.D8[6]
+D[6] => conjuntoff:flipflop11.D8[6]
+D[7] => conjuntoff:flipflop00.D8[7]
+D[7] => conjuntoff:flipflop01.D8[7]
+D[7] => conjuntoff:flipflop10.D8[7]
+D[7] => conjuntoff:flipflop11.D8[7]
+Clock => conjuntoff:flipflop00.Clock8
+Clock => conjuntoff:flipflop01.Clock8
+Clock => conjuntoff:flipflop10.Clock8
+Clock => conjuntoff:flipflop11.Clock8
+enderecoX => decodificador:decod_X.endereco
+enderecoY => decodificador:decod_Y.endereco
+escrever => conjuntoff:flipflop00.W
+escrever => conjuntoff:flipflop01.W
+escrever => conjuntoff:flipflop10.W
+escrever => conjuntoff:flipflop11.W
+ler => Saida.IN1
+ler => Saida.IN1
+ler => Saida.IN1
+ler => Saida.IN1
+ler => Saida.IN1
+ler => Saida.IN1
+ler => Saida.IN1
+ler => Saida.IN1
+Saida[0] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+Saida[1] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+Saida[2] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+Saida[3] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+Saida[4] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+Saida[5] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+Saida[6] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+Saida[7] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|decodificador:decod_X
+endereco => Saida_1.DATAIN
+endereco => Saida_0.DATAIN
+Saida_0 <= endereco.DB_MAX_OUTPUT_PORT_TYPE
+Saida_1 <= endereco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|decodificador:decod_Y
+endereco => Saida_1.DATAIN
+endereco => Saida_0.DATAIN
+Saida_0 <= endereco.DB_MAX_OUTPUT_PORT_TYPE
+Saida_1 <= endereco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00
+D8[0] => Distribuidor:entrada.D_8[0]
+D8[1] => Distribuidor:entrada.D_8[1]
+D8[2] => Distribuidor:entrada.D_8[2]
+D8[3] => Distribuidor:entrada.D_8[3]
+D8[4] => Distribuidor:entrada.D_8[4]
+D8[5] => Distribuidor:entrada.D_8[5]
+D8[6] => Distribuidor:entrada.D_8[6]
+D8[7] => Distribuidor:entrada.D_8[7]
+Clock8 => cond.IN1
+SX => sxsy_out[0].IN0
+SY => sxsy_out[0].IN1
+W => cond.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+Q8[0] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[1] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[2] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[3] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[4] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[5] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[6] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[7] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|Distribuidor:entrada
+D_8[0] => d0.DATAIN
+D_8[1] => d1.DATAIN
+D_8[2] => d2.DATAIN
+D_8[3] => d3.DATAIN
+D_8[4] => d4.DATAIN
+D_8[5] => d5.DATAIN
+D_8[6] => d6.DATAIN
+D_8[7] => d7.DATAIN
+d0 <= D_8[0].DB_MAX_OUTPUT_PORT_TYPE
+d1 <= D_8[1].DB_MAX_OUTPUT_PORT_TYPE
+d2 <= D_8[2].DB_MAX_OUTPUT_PORT_TYPE
+d3 <= D_8[3].DB_MAX_OUTPUT_PORT_TYPE
+d4 <= D_8[4].DB_MAX_OUTPUT_PORT_TYPE
+d5 <= D_8[5].DB_MAX_OUTPUT_PORT_TYPE
+d6 <= D_8[6].DB_MAX_OUTPUT_PORT_TYPE
+d7 <= D_8[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|flipflop:flipflop_0
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|flipflop:flipflop_1
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|flipflop:flipflop_2
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|flipflop:flipflop_3
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|flipflop:flipflop_4
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|flipflop:flipflop_5
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|flipflop:flipflop_6
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|flipflop:flipflop_7
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop00|coletor:saida
+d00 => Q_88[0].DATAIN
+d11 => Q_88[1].DATAIN
+d22 => Q_88[2].DATAIN
+d33 => Q_88[3].DATAIN
+d44 => Q_88[4].DATAIN
+d55 => Q_88[5].DATAIN
+d66 => Q_88[6].DATAIN
+d77 => Q_88[7].DATAIN
+Q_88[0] <= d00.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[1] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[2] <= d22.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[3] <= d33.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[4] <= d44.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[5] <= d55.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[6] <= d66.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[7] <= d77.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01
+D8[0] => Distribuidor:entrada.D_8[0]
+D8[1] => Distribuidor:entrada.D_8[1]
+D8[2] => Distribuidor:entrada.D_8[2]
+D8[3] => Distribuidor:entrada.D_8[3]
+D8[4] => Distribuidor:entrada.D_8[4]
+D8[5] => Distribuidor:entrada.D_8[5]
+D8[6] => Distribuidor:entrada.D_8[6]
+D8[7] => Distribuidor:entrada.D_8[7]
+Clock8 => cond.IN1
+SX => sxsy_out[0].IN0
+SY => sxsy_out[0].IN1
+W => cond.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+Q8[0] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[1] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[2] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[3] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[4] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[5] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[6] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[7] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|Distribuidor:entrada
+D_8[0] => d0.DATAIN
+D_8[1] => d1.DATAIN
+D_8[2] => d2.DATAIN
+D_8[3] => d3.DATAIN
+D_8[4] => d4.DATAIN
+D_8[5] => d5.DATAIN
+D_8[6] => d6.DATAIN
+D_8[7] => d7.DATAIN
+d0 <= D_8[0].DB_MAX_OUTPUT_PORT_TYPE
+d1 <= D_8[1].DB_MAX_OUTPUT_PORT_TYPE
+d2 <= D_8[2].DB_MAX_OUTPUT_PORT_TYPE
+d3 <= D_8[3].DB_MAX_OUTPUT_PORT_TYPE
+d4 <= D_8[4].DB_MAX_OUTPUT_PORT_TYPE
+d5 <= D_8[5].DB_MAX_OUTPUT_PORT_TYPE
+d6 <= D_8[6].DB_MAX_OUTPUT_PORT_TYPE
+d7 <= D_8[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|flipflop:flipflop_0
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|flipflop:flipflop_1
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|flipflop:flipflop_2
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|flipflop:flipflop_3
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|flipflop:flipflop_4
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|flipflop:flipflop_5
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|flipflop:flipflop_6
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|flipflop:flipflop_7
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop01|coletor:saida
+d00 => Q_88[0].DATAIN
+d11 => Q_88[1].DATAIN
+d22 => Q_88[2].DATAIN
+d33 => Q_88[3].DATAIN
+d44 => Q_88[4].DATAIN
+d55 => Q_88[5].DATAIN
+d66 => Q_88[6].DATAIN
+d77 => Q_88[7].DATAIN
+Q_88[0] <= d00.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[1] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[2] <= d22.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[3] <= d33.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[4] <= d44.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[5] <= d55.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[6] <= d66.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[7] <= d77.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10
+D8[0] => Distribuidor:entrada.D_8[0]
+D8[1] => Distribuidor:entrada.D_8[1]
+D8[2] => Distribuidor:entrada.D_8[2]
+D8[3] => Distribuidor:entrada.D_8[3]
+D8[4] => Distribuidor:entrada.D_8[4]
+D8[5] => Distribuidor:entrada.D_8[5]
+D8[6] => Distribuidor:entrada.D_8[6]
+D8[7] => Distribuidor:entrada.D_8[7]
+Clock8 => cond.IN1
+SX => sxsy_out[0].IN0
+SY => sxsy_out[0].IN1
+W => cond.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+Q8[0] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[1] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[2] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[3] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[4] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[5] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[6] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[7] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|Distribuidor:entrada
+D_8[0] => d0.DATAIN
+D_8[1] => d1.DATAIN
+D_8[2] => d2.DATAIN
+D_8[3] => d3.DATAIN
+D_8[4] => d4.DATAIN
+D_8[5] => d5.DATAIN
+D_8[6] => d6.DATAIN
+D_8[7] => d7.DATAIN
+d0 <= D_8[0].DB_MAX_OUTPUT_PORT_TYPE
+d1 <= D_8[1].DB_MAX_OUTPUT_PORT_TYPE
+d2 <= D_8[2].DB_MAX_OUTPUT_PORT_TYPE
+d3 <= D_8[3].DB_MAX_OUTPUT_PORT_TYPE
+d4 <= D_8[4].DB_MAX_OUTPUT_PORT_TYPE
+d5 <= D_8[5].DB_MAX_OUTPUT_PORT_TYPE
+d6 <= D_8[6].DB_MAX_OUTPUT_PORT_TYPE
+d7 <= D_8[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|flipflop:flipflop_0
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|flipflop:flipflop_1
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|flipflop:flipflop_2
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|flipflop:flipflop_3
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|flipflop:flipflop_4
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|flipflop:flipflop_5
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|flipflop:flipflop_6
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|flipflop:flipflop_7
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop10|coletor:saida
+d00 => Q_88[0].DATAIN
+d11 => Q_88[1].DATAIN
+d22 => Q_88[2].DATAIN
+d33 => Q_88[3].DATAIN
+d44 => Q_88[4].DATAIN
+d55 => Q_88[5].DATAIN
+d66 => Q_88[6].DATAIN
+d77 => Q_88[7].DATAIN
+Q_88[0] <= d00.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[1] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[2] <= d22.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[3] <= d33.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[4] <= d44.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[5] <= d55.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[6] <= d66.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[7] <= d77.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11
+D8[0] => Distribuidor:entrada.D_8[0]
+D8[1] => Distribuidor:entrada.D_8[1]
+D8[2] => Distribuidor:entrada.D_8[2]
+D8[3] => Distribuidor:entrada.D_8[3]
+D8[4] => Distribuidor:entrada.D_8[4]
+D8[5] => Distribuidor:entrada.D_8[5]
+D8[6] => Distribuidor:entrada.D_8[6]
+D8[7] => Distribuidor:entrada.D_8[7]
+Clock8 => cond.IN1
+SX => sxsy_out[0].IN0
+SY => sxsy_out[0].IN1
+W => cond.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+W => Q8.IN1
+Q8[0] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[1] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[2] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[3] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[4] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[5] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[6] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+Q8[7] <= Q8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|Distribuidor:entrada
+D_8[0] => d0.DATAIN
+D_8[1] => d1.DATAIN
+D_8[2] => d2.DATAIN
+D_8[3] => d3.DATAIN
+D_8[4] => d4.DATAIN
+D_8[5] => d5.DATAIN
+D_8[6] => d6.DATAIN
+D_8[7] => d7.DATAIN
+d0 <= D_8[0].DB_MAX_OUTPUT_PORT_TYPE
+d1 <= D_8[1].DB_MAX_OUTPUT_PORT_TYPE
+d2 <= D_8[2].DB_MAX_OUTPUT_PORT_TYPE
+d3 <= D_8[3].DB_MAX_OUTPUT_PORT_TYPE
+d4 <= D_8[4].DB_MAX_OUTPUT_PORT_TYPE
+d5 <= D_8[5].DB_MAX_OUTPUT_PORT_TYPE
+d6 <= D_8[6].DB_MAX_OUTPUT_PORT_TYPE
+d7 <= D_8[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|flipflop:flipflop_0
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|flipflop:flipflop_1
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|flipflop:flipflop_2
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|flipflop:flipflop_3
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|flipflop:flipflop_4
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|flipflop:flipflop_5
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|flipflop:flipflop_6
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|flipflop:flipflop_7
+D => D2.IN0
+D => c2.IN0
+clock => D2.IN1
+clock => c2.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q_n <= sq_n.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final|conjuntoff:flipflop11|coletor:saida
+d00 => Q_88[0].DATAIN
+d11 => Q_88[1].DATAIN
+d22 => Q_88[2].DATAIN
+d33 => Q_88[3].DATAIN
+d44 => Q_88[4].DATAIN
+d55 => Q_88[5].DATAIN
+d66 => Q_88[6].DATAIN
+d77 => Q_88[7].DATAIN
+Q_88[0] <= d00.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[1] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[2] <= d22.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[3] <= d33.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[4] <= d44.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[5] <= d55.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[6] <= d66.DB_MAX_OUTPUT_PORT_TYPE
+Q_88[7] <= d77.DB_MAX_OUTPUT_PORT_TYPE
+
+

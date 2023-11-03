@@ -1,0 +1,119 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
+entity final is
+    Port (
+        D: in STD_LOGIC_VECTOR(7 downto 0);
+        Clock, enderecoX, enderecoY, escrever, ler: in STD_LOGIC;
+        Saida: out STD_LOGIC_VECTOR(7 downto 0)
+    );
+end final;
+
+architecture circuito_final of final is
+
+
+component conjuntoff is
+	Port (
+        D8: in STD_LOGIC_VECTOR(7 downto 0);
+        Clock8, SX, SY, W: in STD_LOGIC;
+        Q8: out STD_LOGIC_VECTOR(7 downto 0)
+    );
+end component;
+
+
+
+
+
+signal ler_out Q_00, Q_01, Q_10, Q_11, Q_0010, Q_0111, QQ: STD_LOGIC_VECTOR(7 downto 0);
+signal decod_X0, decod_X1, decod_Y0, decod_Y1: std_logic; 
+
+
+
+
+
+
+
+begin
+	process(ler)
+			begin
+				 if ler = '1' then
+					  ler_out <= (others => '1'); -- Repetir '0' oito vezes
+				 else
+					  ler_out <= (others => '0'); -- Repetir '1' oito vezes
+				 end if;
+		
+	--Decodificador improvisado	
+	process(enderecoX,enderecoY)
+			begin
+				if enderecoX = '0' then
+					decod_X0 <= '1';
+					decod_X1 <= '0';
+				else
+					decod_X0 <= '0';
+					decod_X1 <= '1';
+				
+				if enderecoY = '0' then
+					decod_Y0 <= '1';
+					decod_Y1 <= '0';
+				else
+					decod_Y0 <= '0';
+					decod_Y1 <= '1';
+			end process;
+				
+	--Configurar CLOCK!!!!!!!	
+	flipflop00: conjuntoff port map(		 	 
+		 D8 => D,
+		 Clock8 => Clock,
+		 SX => decod_X0,
+		 SY => decod_Y0,
+		 W  => escrever
+		 Q8 => Q_00
+		);		
+		
+		
+	flipflop01: conjuntoff port map(		 	 
+		 D8 => D,
+		 Clock8 => Clock,
+		 SX => decod_X0,
+		 SY => decod_Y1,
+		 W  => escrever
+		 Q8 => Q_01
+		);	
+		
+	flipflop10: conjuntoff port map(		 	 
+		 D8 => D,
+		 Clock8 => Clock,
+		 SX => decod_X1,
+		 SY => decod_Y0,
+		 W  => escrever
+		 Q8 => Q_10
+		);	
+		
+	flipflop11: conjuntoff port map(		 	 
+		 D8 => D,
+		 Clock8 => Clock,
+		 SX => decod_X1,
+		 SY => decod_Y1,
+		 W  => escrever
+		 Q8 => Q_11
+		);	
+		
+		
+	 process (Q_00, Q_10,Q_01, Q_11)
+		begin
+			Q_0010 <= Q_00 or Q_10;		
+			Q_0111 <= Q_01 or Q_11;
+			
+			process(Q_0010,Q_0111)
+				begin
+					QQ <= Q_0010 or Q_0111;
+				end process
+					
+		end process;
+		
+		Saida <= ler_out and QQ;
+
+end circuito_final;

@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+
+entity decodificador is
+    Port (
+        endereco: in STD_LOGIC;
+        Saida_decod: out STD_LOGIC
+    );
+end final;
+
+architecture circuito_final of final is

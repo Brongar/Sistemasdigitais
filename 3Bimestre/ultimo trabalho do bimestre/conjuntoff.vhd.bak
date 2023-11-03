@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity flipflop is
+    Port (
+        D, clock: in STD_LOGIC;
+        Q, Q_n: out STD_LOGIC
+    );
+end flipflop;

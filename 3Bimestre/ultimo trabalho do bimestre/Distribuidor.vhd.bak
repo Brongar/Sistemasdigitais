@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
+
+entity Distribuidor is
+    Port (
+        D: in STD_LOGIC_VECTOR(7 downto 0);
+        d0, d1, d2, d3, d4, d5, d6, d7: out STD_LOGIC
+    );
+end Distribuidor;
+
+
+architecture oitoBits_UmBits of Distribuidor is
+begin
+    -- Distribuindo os bits de D para as saídas
+    d0 <= D(0);
+    d1 <= D(1);
+    d2 <= D(2);
+	 d3 <= D(3);
+	 d4 <= D(4);
+	 d5 <= D(5);
+	 d6 <= D(6);
+	 d7 <= D(7);
+end oitoBits_UmBits;
