@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
--- DATE "11/02/2023 23:14:38"
+-- DATE "11/05/2023 23:59:02"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -40,7 +40,7 @@ ENTITY 	final IS
 	enderecoY : IN std_logic;
 	escrever : IN std_logic;
 	ler : IN std_logic;
-	Saida : OUT std_logic_vector(7 DOWNTO 0)
+	Saida : BUFFER std_logic_vector(7 DOWNTO 0)
 	);
 END final;
 

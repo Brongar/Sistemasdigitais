@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off memoriaffd -c memoriaffd --vector_source="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Waveform10.vwf" --testbench_file="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim/Waveform10.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off memoriaffd -c memoriaffd --vector_source="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Waveform2.vwf" --testbench_file="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim/Waveform2.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Thu Nov 02 23:14:36 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off memoriaffd -c memoriaffd --vector_source="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Waveform10.vwf" --testbench_file="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim/Waveform10.vwf.vht"
+    Info: Processing started: Sun Nov 05 23:59:00 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off memoriaffd -c memoriaffd --vector_source="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Waveform2.vwf" --testbench_file="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim/Waveform2.vwf.vht"
 Info (119006): Selected device EP4CE22F17C6 for design "memoriaffd"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -54,14 +54,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Thu Nov 02 23:14:37 2023
+    Info: Processing started: Sun Nov 05 23:59:01 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim/" memoriaffd -c memoriaffd
 Info (119006): Selected device EP4CE22F17C6 for design "memoriaffd"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file memoriaffd.vho in folder "D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Thu Nov 02 23:14:38 2023
+    Info: Processing ended: Sun Nov 05 23:59:02 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -85,34 +85,34 @@ Reading D:/Programas/Quartus2/modelsim_ase/tcl/vsim/pref.tcl
 
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:14:38 on Nov 02,2023
+# Start time: 23:59:02 on Nov 05,2023
 # vcom -work work memoriaffd.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
-
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
 # -- Compiling entity final
 # -- Compiling architecture structure of final
-# End time: 23:14:39 on Nov 02,2023, Elapsed time: 0:00:01
+
+# End time: 23:59:03 on Nov 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:14:39 on Nov 02,2023
-# vcom -work work Waveform10.vwf.vht 
+# Start time: 23:59:03 on Nov 05,2023
+# vcom -work work Waveform2.vwf.vht 
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity final_vhd_vec_tst
+
 # -- Compiling architecture final_arch of final_vhd_vec_tst
-# End time: 23:14:39 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 23:59:03 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.final_vhd_vec_tst 
-# Start time: 23:14:39 on Nov 02,2023
+# Start time: 23:59:03 on Nov 05,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -128,20 +128,20 @@ Reading D:/Programas/Quartus2/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # after#31
 
-# End time: 23:14:39 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 23:59:03 on Nov 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Waveform10.vwf...
+Reading D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/WaveformFFinal.vwf...
 
 Reading D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim/memoriaffd.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim/memoriaffd_20231102231440.sim.vwf
+Writing the resulting VWF to D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/simulation/qsim/memoriaffd_20231105235904.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/01/2023 22:00:02"
+-- Generated on "11/03/2023 18:23:22"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          flipflop
+-- Vhdl Test Bench(with test vectors) for design  :          final
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,58 +29,184 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY flipflop_vhd_vec_tst IS
-END flipflop_vhd_vec_tst;
-ARCHITECTURE flipflop_arch OF flipflop_vhd_vec_tst IS
+ENTITY final_vhd_vec_tst IS
+END final_vhd_vec_tst;
+ARCHITECTURE final_arch OF final_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL c2 : STD_LOGIC;
-SIGNAL D : STD_LOGIC;
-SIGNAL Q : STD_LOGIC;
-SIGNAL Q_n : STD_LOGIC;
-COMPONENT flipflop
+SIGNAL Clock : STD_LOGIC;
+SIGNAL D : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL enderecoX : STD_LOGIC;
+SIGNAL enderecoY : STD_LOGIC;
+SIGNAL escrever : STD_LOGIC;
+SIGNAL ler : STD_LOGIC;
+SIGNAL Saida : STD_LOGIC_VECTOR(7 DOWNTO 0);
+COMPONENT final
 	PORT (
-	c2 : IN STD_LOGIC;
-	D : IN STD_LOGIC;
-	Q : OUT STD_LOGIC;
-	Q_n : OUT STD_LOGIC
+	Clock : IN STD_LOGIC;
+	D : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+	enderecoX : IN STD_LOGIC;
+	enderecoY : IN STD_LOGIC;
+	escrever : IN STD_LOGIC;
+	ler : IN STD_LOGIC;
+	Saida : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : flipflop
+	i1 : final
 	PORT MAP (
 -- list connections between master ports and signals
-	c2 => c2,
+	Clock => Clock,
 	D => D,
-	Q => Q,
-	Q_n => Q_n
+	enderecoX => enderecoX,
+	enderecoY => enderecoY,
+	escrever => escrever,
+	ler => ler,
+	Saida => Saida
 	);
-
--- D
-t_prcs_D: PROCESS
+-- D[7]
+t_prcs_D_7: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		D <= '0';
-		WAIT FOR 40000 ps;
-		D <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
-	D <= '0';
+	D(7) <= '0';
 WAIT;
-END PROCESS t_prcs_D;
-
--- c2
-t_prcs_c2: PROCESS
+END PROCESS t_prcs_D_7;
+-- D[6]
+t_prcs_D_6: PROCESS
+BEGIN
+	D(6) <= '0';
+WAIT;
+END PROCESS t_prcs_D_6;
+-- D[5]
+t_prcs_D_5: PROCESS
+BEGIN
+	D(5) <= '0';
+WAIT;
+END PROCESS t_prcs_D_5;
+-- D[4]
+t_prcs_D_4: PROCESS
+BEGIN
+	D(4) <= '0';
+	WAIT FOR 640000 ps;
+	D(4) <= '1';
+WAIT;
+END PROCESS t_prcs_D_4;
+-- D[3]
+t_prcs_D_3: PROCESS
+BEGIN
+	D(3) <= '0';
+	WAIT FOR 320000 ps;
+	D(3) <= '1';
+	WAIT FOR 320000 ps;
+	D(3) <= '0';
+	WAIT FOR 320000 ps;
+	D(3) <= '1';
+WAIT;
+END PROCESS t_prcs_D_3;
+-- D[2]
+t_prcs_D_2: PROCESS
+BEGIN
+	FOR i IN 1 TO 3
+	LOOP
+		D(2) <= '0';
+		WAIT FOR 160000 ps;
+		D(2) <= '1';
+		WAIT FOR 160000 ps;
+	END LOOP;
+	D(2) <= '0';
+WAIT;
+END PROCESS t_prcs_D_2;
+-- D[1]
+t_prcs_D_1: PROCESS
 BEGIN
 	FOR i IN 1 TO 6
 	LOOP
-		c2 <= '0';
+		D(1) <= '0';
 		WAIT FOR 80000 ps;
-		c2 <= '1';
+		D(1) <= '1';
 		WAIT FOR 80000 ps;
 	END LOOP;
-	c2 <= '0';
+	D(1) <= '0';
 WAIT;
-END PROCESS t_prcs_c2;
-END flipflop_arch;
+END PROCESS t_prcs_D_1;
+-- D[0]
+t_prcs_D_0: PROCESS
+BEGIN
+	FOR i IN 1 TO 12
+	LOOP
+		D(0) <= '0';
+		WAIT FOR 40000 ps;
+		D(0) <= '1';
+		WAIT FOR 40000 ps;
+	END LOOP;
+	D(0) <= '0';
+WAIT;
+END PROCESS t_prcs_D_0;
+
+-- Clock
+t_prcs_Clock: PROCESS
+BEGIN
+LOOP
+	Clock <= '0';
+	WAIT FOR 10000 ps;
+	Clock <= '1';
+	WAIT FOR 10000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_Clock;
+
+-- enderecoX
+t_prcs_enderecoX: PROCESS
+BEGIN
+LOOP
+	enderecoX <= '0';
+	WAIT FOR 20000 ps;
+	enderecoX <= '1';
+	WAIT FOR 20000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_enderecoX;
+
+-- enderecoY
+t_prcs_enderecoY: PROCESS
+BEGIN
+	FOR i IN 1 TO 16
+	LOOP
+		enderecoY <= '0';
+		WAIT FOR 30000 ps;
+		enderecoY <= '1';
+		WAIT FOR 30000 ps;
+	END LOOP;
+	enderecoY <= '0';
+	WAIT FOR 30000 ps;
+	enderecoY <= '1';
+WAIT;
+END PROCESS t_prcs_enderecoY;
+
+-- escrever
+t_prcs_escrever: PROCESS
+BEGIN
+	FOR i IN 1 TO 12
+	LOOP
+		escrever <= '0';
+		WAIT FOR 40000 ps;
+		escrever <= '1';
+		WAIT FOR 40000 ps;
+	END LOOP;
+	escrever <= '0';
+WAIT;
+END PROCESS t_prcs_escrever;
+
+-- ler
+t_prcs_ler: PROCESS
+BEGIN
+	FOR i IN 1 TO 6
+	LOOP
+		ler <= '0';
+		WAIT FOR 80000 ps;
+		ler <= '1';
+		WAIT FOR 80000 ps;
+	END LOOP;
+	ler <= '0';
+WAIT;
+END PROCESS t_prcs_ler;
+END final_arch;

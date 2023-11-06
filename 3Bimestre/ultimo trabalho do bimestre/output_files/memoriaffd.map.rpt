@@ -1,5 +1,5 @@
 Analysis & Synthesis report for memoriaffd
-Thu Nov 02 23:08:14 2023
+Sun Nov 05 23:27:42 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 02 23:08:14 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 05 23:27:41 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; memoriaffd                                  ;
 ; Top-level Entity Name              ; final                                       ;
@@ -423,7 +423,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 02 23:08:01 2023
+    Info: Processing started: Sun Nov 05 23:27:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off memoriaffd -c memoriaffd
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -446,13 +446,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file final.v
     Info (12022): Found design unit 1: final-circuito_final File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 14
     Info (12023): Found entity 1: final File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 6
 Info (12127): Elaborating entity "final" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at final.vhd(97): signal "Q_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 97
-Warning (10492): VHDL Process Statement warning at final.vhd(97): signal "Q_0111" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 97
-Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decod_X" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 44
-Info (12128): Elaborating entity "conjuntoff" for hierarchy "conjuntoff:flipflop00" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 57
-Info (12128): Elaborating entity "Distribuidor" for hierarchy "conjuntoff:flipflop00|Distribuidor:entrada" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 72
-Info (12128): Elaborating entity "flipflop" for hierarchy "conjuntoff:flipflop00|flipflop:flipflop_0" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 84
-Info (12128): Elaborating entity "coletor" for hierarchy "conjuntoff:flipflop00|coletor:saida" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at final.vhd(100): signal "Q_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at final.vhd(100): signal "Q_0111" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 100
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decod_X" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 47
+Info (12128): Elaborating entity "conjuntoff" for hierarchy "conjuntoff:flipflop00" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 60
+Warning (10036): Verilog HDL or VHDL warning at conjuntoff.vhd(41): object "ClockFinal" assigned a value but never read File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 41
+Info (12128): Elaborating entity "Distribuidor" for hierarchy "conjuntoff:flipflop00|Distribuidor:entrada" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 80
+Info (12128): Elaborating entity "flipflop" for hierarchy "conjuntoff:flipflop00|flipflop:flipflop_0" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 92
+Info (12128): Elaborating entity "coletor" for hierarchy "conjuntoff:flipflop00|coletor:saida" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 137
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -460,9 +461,9 @@ Info (21057): Implemented 81 device resources after synthesis - the final resour
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 60 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Thu Nov 02 23:08:14 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Sun Nov 05 23:27:42 2023
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:26
 

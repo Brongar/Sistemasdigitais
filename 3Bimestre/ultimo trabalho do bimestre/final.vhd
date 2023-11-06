@@ -40,6 +40,9 @@ begin
             ler_out <= (others => '0');
         end if;
     end process;
+	 
+	 
+	 
 
     decod_X:  decodificador port map(
 			endereco => enderecoX, 

@@ -38,7 +38,7 @@ component coletor is
     );
 end component;
 
-signal w_out, sxsy_out, Q_88_out: STD_LOGIC_VECTOR(7 downto 0); 
+signal w_out, sxsy_out, Q_88_out, ClockFinal: STD_LOGIC_VECTOR(7 downto 0); 
 signal sxsy_out_1bit, cond: std_logic;
 
 
@@ -55,6 +55,14 @@ begin
 			 else
 				  w_out <= (others => '1'); -- Repetir '1' oito vezes
 			 end if;
+			 
+			 
+			 if Clock8 = '1' then
+				  ClockFinal <= (others => '1'); -- Repetir '1' oito vezes
+			 else
+				  ClockFinal <= (others => '0'); -- Repetir '0' oito vezes
+			 end if;
+			 
 			 
 			 sxsy_out_1bit <= SX and SY;
 			 if sxsy_out_1bit = '0' then
@@ -140,7 +148,7 @@ begin
 		
 	--process (Q_88_out, SXSY_out, w_out)
 		--begin
-	Q8 <= Q_88_out and SXSY_out and w_out;
+	Q8 <= Q_88_out and SXSY_out and w_out; --and ClockFinal;
 	
 		
     
