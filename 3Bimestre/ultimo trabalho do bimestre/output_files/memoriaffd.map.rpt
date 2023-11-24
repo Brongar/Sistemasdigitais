@@ -1,5 +1,5 @@
 Analysis & Synthesis report for memoriaffd
-Sun Nov 05 23:27:42 2023
+Tue Nov 14 13:38:46 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 05 23:27:41 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 14 13:38:46 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; memoriaffd                                  ;
 ; Top-level Entity Name              ; final                                       ;
@@ -161,7 +161,7 @@ agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -171,18 +171,18 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                  ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
-; flipflop.vhd                     ; yes             ; User VHDL File  ; D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/flipflop.vhd      ;         ;
-; Distribuidor.vhd                 ; yes             ; User VHDL File  ; D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Distribuidor.vhd  ;         ;
-; conjuntoff.vhd                   ; yes             ; User VHDL File  ; D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd    ;         ;
-; coletor.vhd                      ; yes             ; User VHDL File  ; D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/coletor.vhd       ;         ;
-; decodificador.vhd                ; yes             ; User VHDL File  ; D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/decodificador.vhd ;         ;
-; final.vhd                        ; yes             ; User VHDL File  ; D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd         ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+; flipflop.vhd                     ; yes             ; User VHDL File  ; C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/flipflop.vhd      ;         ;
+; Distribuidor.vhd                 ; yes             ; User VHDL File  ; C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Distribuidor.vhd  ;         ;
+; conjuntoff.vhd                   ; yes             ; User VHDL File  ; C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd    ;         ;
+; coletor.vhd                      ; yes             ; User VHDL File  ; C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/coletor.vhd       ;         ;
+; decodificador.vhd                ; yes             ; User VHDL File  ; C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/decodificador.vhd ;         ;
+; final.vhd                        ; yes             ; User VHDL File  ; C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd         ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -413,7 +413,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -423,37 +423,37 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Nov 05 23:27:29 2023
+    Info: Processing started: Tue Nov 14 13:38:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off memoriaffd -c memoriaffd
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
-    Info (12022): Found design unit 1: flipflop-latch File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/flipflop.vhd Line: 14
-    Info (12023): Found entity 1: flipflop File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/flipflop.vhd Line: 6
+    Info (12022): Found design unit 1: flipflop-latch File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/flipflop.vhd Line: 14
+    Info (12023): Found entity 1: flipflop File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/flipflop.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file distribuidor.vhd
-    Info (12022): Found design unit 1: Distribuidor-oitoBits_UmBits File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Distribuidor.vhd Line: 16
-    Info (12023): Found entity 1: Distribuidor File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Distribuidor.vhd Line: 8
+    Info (12022): Found design unit 1: Distribuidor-oitoBits_UmBits File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Distribuidor.vhd Line: 16
+    Info (12023): Found entity 1: Distribuidor File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/Distribuidor.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file conjuntoff.vhd
-    Info (12022): Found design unit 1: conjuntoff-flipflopDmod File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 15
-    Info (12023): Found entity 1: conjuntoff File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 7
+    Info (12022): Found design unit 1: conjuntoff-flipflopDmod File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 15
+    Info (12023): Found entity 1: conjuntoff File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file coletor.vhd
-    Info (12022): Found design unit 1: coletor-UmBits_OitoBits File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/coletor.vhd Line: 17
-    Info (12023): Found entity 1: coletor File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/coletor.vhd Line: 8
+    Info (12022): Found design unit 1: coletor-UmBits_OitoBits File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/coletor.vhd Line: 17
+    Info (12023): Found entity 1: coletor File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/coletor.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
-    Info (12022): Found design unit 1: decodificador-circuito_decod File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/decodificador.vhd Line: 13
-    Info (12023): Found entity 1: decodificador File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/decodificador.vhd Line: 6
+    Info (12022): Found design unit 1: decodificador-circuito_decod File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/decodificador.vhd Line: 13
+    Info (12023): Found entity 1: decodificador File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/decodificador.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file final.vhd
-    Info (12022): Found design unit 1: final-circuito_final File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 14
-    Info (12023): Found entity 1: final File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 6
+    Info (12022): Found design unit 1: final-circuito_final File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 14
+    Info (12023): Found entity 1: final File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 6
 Info (12127): Elaborating entity "final" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at final.vhd(100): signal "Q_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at final.vhd(100): signal "Q_0111" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 100
-Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decod_X" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 47
-Info (12128): Elaborating entity "conjuntoff" for hierarchy "conjuntoff:flipflop00" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 60
-Warning (10036): Verilog HDL or VHDL warning at conjuntoff.vhd(41): object "ClockFinal" assigned a value but never read File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 41
-Info (12128): Elaborating entity "Distribuidor" for hierarchy "conjuntoff:flipflop00|Distribuidor:entrada" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 80
-Info (12128): Elaborating entity "flipflop" for hierarchy "conjuntoff:flipflop00|flipflop:flipflop_0" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 92
-Info (12128): Elaborating entity "coletor" for hierarchy "conjuntoff:flipflop00|coletor:saida" File: D:/Documentos/GitHub/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at final.vhd(100): signal "Q_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at final.vhd(100): signal "Q_0111" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 100
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decod_X" File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 47
+Info (12128): Elaborating entity "conjuntoff" for hierarchy "conjuntoff:flipflop00" File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/final.vhd Line: 60
+Warning (10036): Verilog HDL or VHDL warning at conjuntoff.vhd(41): object "ClockFinal" assigned a value but never read File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 41
+Info (12128): Elaborating entity "Distribuidor" for hierarchy "conjuntoff:flipflop00|Distribuidor:entrada" File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 80
+Info (12128): Elaborating entity "flipflop" for hierarchy "conjuntoff:flipflop00|flipflop:flipflop_0" File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 92
+Info (12128): Elaborating entity "coletor" for hierarchy "conjuntoff:flipflop00|coletor:saida" File: C:/Users/Akira/Documents/github/Sistemasdigitais/3Bimestre/ultimo trabalho do bimestre/conjuntoff.vhd Line: 137
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -462,9 +462,9 @@ Info (21057): Implemented 81 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 60 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Sun Nov 05 23:27:42 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Tue Nov 14 13:38:46 2023
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:39
 
 

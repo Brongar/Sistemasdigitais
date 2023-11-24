@@ -26,6 +26,7 @@
 -- Simulation tool : 3rd Party
 -- 
 
+
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
@@ -49,7 +50,7 @@ COMPONENT final
 	enderecoY : IN STD_LOGIC;
 	escrever : IN STD_LOGIC;
 	ler : IN STD_LOGIC;
-	Saida : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	Saida : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -68,11 +69,35 @@ BEGIN
 t_prcs_D_7: PROCESS
 BEGIN
 	D(7) <= '0';
+	WAIT FOR 673 ps;
+	D(7) <= '1';
+	WAIT FOR 12874 ps;
+	D(7) <= '0';
+	WAIT FOR 38966 ps;
+	D(7) <= '1';
+	WAIT FOR 8759 ps;
+	D(7) <= '0';
+	WAIT FOR 11776 ps;
+	D(7) <= '1';
+	WAIT FOR 8795 ps;
+	D(7) <= '0';
 WAIT;
 END PROCESS t_prcs_D_7;
 -- D[6]
 t_prcs_D_6: PROCESS
 BEGIN
+	D(6) <= '0';
+	WAIT FOR 673 ps;
+	D(6) <= '1';
+	WAIT FOR 12874 ps;
+	D(6) <= '0';
+	WAIT FOR 38966 ps;
+	D(6) <= '1';
+	WAIT FOR 8759 ps;
+	D(6) <= '0';
+	WAIT FOR 11776 ps;
+	D(6) <= '1';
+	WAIT FOR 8795 ps;
 	D(6) <= '0';
 WAIT;
 END PROCESS t_prcs_D_6;
@@ -80,64 +105,107 @@ END PROCESS t_prcs_D_6;
 t_prcs_D_5: PROCESS
 BEGIN
 	D(5) <= '0';
+	WAIT FOR 673 ps;
+	D(5) <= '1';
+	WAIT FOR 12874 ps;
+	D(5) <= '0';
+	WAIT FOR 38966 ps;
+	D(5) <= '1';
+	WAIT FOR 8759 ps;
+	D(5) <= '0';
+	WAIT FOR 11776 ps;
+	D(5) <= '1';
+	WAIT FOR 8795 ps;
+	D(5) <= '0';
 WAIT;
 END PROCESS t_prcs_D_5;
 -- D[4]
 t_prcs_D_4: PROCESS
 BEGIN
 	D(4) <= '0';
-	WAIT FOR 640000 ps;
+	WAIT FOR 673 ps;
 	D(4) <= '1';
+	WAIT FOR 12874 ps;
+	D(4) <= '0';
+	WAIT FOR 38966 ps;
+	D(4) <= '1';
+	WAIT FOR 8759 ps;
+	D(4) <= '0';
+	WAIT FOR 11776 ps;
+	D(4) <= '1';
+	WAIT FOR 8795 ps;
+	D(4) <= '0';
 WAIT;
 END PROCESS t_prcs_D_4;
 -- D[3]
 t_prcs_D_3: PROCESS
 BEGIN
 	D(3) <= '0';
-	WAIT FOR 320000 ps;
+	WAIT FOR 673 ps;
 	D(3) <= '1';
-	WAIT FOR 320000 ps;
+	WAIT FOR 12874 ps;
 	D(3) <= '0';
-	WAIT FOR 320000 ps;
+	WAIT FOR 9342 ps;
 	D(3) <= '1';
+	WAIT FOR 10856 ps;
+	D(3) <= '0';
+	WAIT FOR 39303 ps;
+	D(3) <= '1';
+	WAIT FOR 8795 ps;
+	D(3) <= '0';
 WAIT;
 END PROCESS t_prcs_D_3;
 -- D[2]
 t_prcs_D_2: PROCESS
 BEGIN
-	FOR i IN 1 TO 3
-	LOOP
-		D(2) <= '0';
-		WAIT FOR 160000 ps;
-		D(2) <= '1';
-		WAIT FOR 160000 ps;
-	END LOOP;
+	D(2) <= '0';
+	WAIT FOR 673 ps;
+	D(2) <= '1';
+	WAIT FOR 12874 ps;
+	D(2) <= '0';
+	WAIT FOR 9342 ps;
+	D(2) <= '1';
+	WAIT FOR 10856 ps;
+	D(2) <= '0';
+	WAIT FOR 39303 ps;
+	D(2) <= '1';
+	WAIT FOR 8795 ps;
 	D(2) <= '0';
 WAIT;
 END PROCESS t_prcs_D_2;
 -- D[1]
 t_prcs_D_1: PROCESS
 BEGIN
-	FOR i IN 1 TO 6
-	LOOP
-		D(1) <= '0';
-		WAIT FOR 80000 ps;
-		D(1) <= '1';
-		WAIT FOR 80000 ps;
-	END LOOP;
+	D(1) <= '0';
+	WAIT FOR 673 ps;
+	D(1) <= '1';
+	WAIT FOR 12874 ps;
+	D(1) <= '0';
+	WAIT FOR 9342 ps;
+	D(1) <= '1';
+	WAIT FOR 10856 ps;
+	D(1) <= '0';
+	WAIT FOR 39303 ps;
+	D(1) <= '1';
+	WAIT FOR 8795 ps;
 	D(1) <= '0';
 WAIT;
 END PROCESS t_prcs_D_1;
 -- D[0]
 t_prcs_D_0: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		D(0) <= '0';
-		WAIT FOR 40000 ps;
-		D(0) <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
+	D(0) <= '0';
+	WAIT FOR 673 ps;
+	D(0) <= '1';
+	WAIT FOR 12874 ps;
+	D(0) <= '0';
+	WAIT FOR 9342 ps;
+	D(0) <= '1';
+	WAIT FOR 10856 ps;
+	D(0) <= '0';
+	WAIT FOR 39303 ps;
+	D(0) <= '1';
+	WAIT FOR 8795 ps;
 	D(0) <= '0';
 WAIT;
 END PROCESS t_prcs_D_0;
@@ -147,9 +215,9 @@ t_prcs_Clock: PROCESS
 BEGIN
 LOOP
 	Clock <= '0';
-	WAIT FOR 10000 ps;
+	WAIT FOR 5000 ps;
 	Clock <= '1';
-	WAIT FOR 10000 ps;
+	WAIT FOR 5000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_Clock;
@@ -157,41 +225,60 @@ END PROCESS t_prcs_Clock;
 -- enderecoX
 t_prcs_enderecoX: PROCESS
 BEGIN
-LOOP
 	enderecoX <= '0';
-	WAIT FOR 20000 ps;
+	WAIT FOR 51446 ps;
 	enderecoX <= '1';
-	WAIT FOR 20000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
+	WAIT FOR 20498 ps;
+	enderecoX <= '0';
+	WAIT FOR 2318 ps;
+	enderecoX <= '1';
+	WAIT FOR 7139 ps;
+	enderecoX <= '0';
+	WAIT FOR 1472 ps;
+	enderecoX <= '1';
+	WAIT FOR 7581 ps;
+	enderecoX <= '0';
+WAIT;
 END PROCESS t_prcs_enderecoX;
 
 -- enderecoY
 t_prcs_enderecoY: PROCESS
 BEGIN
-	FOR i IN 1 TO 16
-	LOOP
-		enderecoY <= '0';
-		WAIT FOR 30000 ps;
-		enderecoY <= '1';
-		WAIT FOR 30000 ps;
-	END LOOP;
 	enderecoY <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 23736 ps;
 	enderecoY <= '1';
+	WAIT FOR 18878 ps;
+	enderecoY <= '0';
+	WAIT FOR 31648 ps;
+	enderecoY <= '1';
+	WAIT FOR 7139 ps;
+	enderecoY <= '0';
+	WAIT FOR 1472 ps;
+	enderecoY <= '1';
+	WAIT FOR 7581 ps;
+	enderecoY <= '0';
 WAIT;
 END PROCESS t_prcs_enderecoY;
 
 -- escrever
 t_prcs_escrever: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		escrever <= '0';
-		WAIT FOR 40000 ps;
-		escrever <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
+	escrever <= '0';
+	WAIT FOR 4360 ps;
+	escrever <= '1';
+	WAIT FOR 5539 ps;
+	escrever <= '0';
+	WAIT FOR 14352 ps;
+	escrever <= '1';
+	WAIT FOR 8685 ps;
+	escrever <= '0';
+	WAIT FOR 19209 ps;
+	escrever <= '1';
+	WAIT FOR 10231 ps;
+	escrever <= '0';
+	WAIT FOR 12217 ps;
+	escrever <= '1';
+	WAIT FOR 6072 ps;
 	escrever <= '0';
 WAIT;
 END PROCESS t_prcs_escrever;
@@ -199,14 +286,24 @@ END PROCESS t_prcs_escrever;
 -- ler
 t_prcs_ler: PROCESS
 BEGIN
-	FOR i IN 1 TO 6
-	LOOP
-		ler <= '0';
-		WAIT FOR 80000 ps;
-		ler <= '1';
-		WAIT FOR 80000 ps;
-	END LOOP;
+	ler <= '0';
+	WAIT FOR 14388 ps;
+	ler <= '1';
+	WAIT FOR 8538 ps;
+	ler <= '0';
+	WAIT FOR 10930 ps;
+	ler <= '1';
+	WAIT FOR 16670 ps;
+	ler <= '0';
+	WAIT FOR 13506 ps;
+	ler <= '1';
+	WAIT FOR 8832 ps;
+	ler <= '0';
+	WAIT FOR 11371 ps;
+	ler <= '1';
+	WAIT FOR 12843 ps;
 	ler <= '0';
 WAIT;
 END PROCESS t_prcs_ler;
 END final_arch;
+
