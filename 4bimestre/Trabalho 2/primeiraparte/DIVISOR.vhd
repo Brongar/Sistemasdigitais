@@ -9,7 +9,7 @@ entity DIVISOR is
 end DIVISOR;
 
 architecture DIVISOR_arch of DIVISOR is
-    signal counter : integer range 0 to 49999999 := 0;  
+    signal counter : integer range 0 to 49999999 := 0;  --
     signal prescaler : integer := 50000000;  -- Prescaler para obter 1 Hz
 begin
     process(clock_in)

@@ -21,6 +21,8 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +41,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
@@ -128,6 +132,26 @@ SIGNAL("saida[0]")
 	PARENT = "saida";
 }
 
+SIGNAL("led1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("led2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clock")
 {
 	NODE
@@ -174,6 +198,24 @@ TRANSITION_LIST("saida[0]")
 	}
 }
 
+TRANSITION_LIST("led1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("led2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "clock";
@@ -194,12 +236,30 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "saida";
+	CHANNEL = "led1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
-	CHILDREN = 3, 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "led2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+	CHILDREN = 5, 6;
 }
 
 DISPLAY_LINE
@@ -207,9 +267,9 @@ DISPLAY_LINE
 	CHANNEL = "saida[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 3;
+	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
-	PARENT = 2;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -217,9 +277,9 @@ DISPLAY_LINE
 	CHANNEL = "saida[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 4;
+	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 2;
+	PARENT = 4;
 }
 
 TIME_BAR

@@ -4,11 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "saida[0]",
+					"name" : "led1",
 					"strict" : false
 				},
 				{
-					"name" : "saida[1]",
+					"name" : "led2",
 					"strict" : false
 				},
 				{

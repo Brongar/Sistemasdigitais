@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/27/2023 15:08:50"
+-- Generated on "11/27/2023 16:13:53"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          primeiraparte
 -- 
@@ -35,13 +35,15 @@ ARCHITECTURE primeiraparte_arch OF primeiraparte_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clock : STD_LOGIC;
+SIGNAL led1 : STD_LOGIC;
+SIGNAL led2 : STD_LOGIC;
 SIGNAL reset : STD_LOGIC;
-SIGNAL saida : STD_LOGIC_VECTOR(1 DOWNTO 0);
 COMPONENT primeiraparte
 	PORT (
 	clock : IN STD_LOGIC;
-	reset : IN STD_LOGIC;
-	saida : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+	led1 : BUFFER STD_LOGIC;
+	led2 : BUFFER STD_LOGIC;
+	reset : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -49,8 +51,9 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	clock => clock,
-	reset => reset,
-	saida => saida
+	led1 => led1,
+	led2 => led2,
+	reset => reset
 	);
 
 -- clock

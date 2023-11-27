@@ -4,13 +4,16 @@ use ieee.std_logic_1164.all;
 entity primeiraparte is
     port (
         reset, clock : in std_logic;
-        saida : out std_logic_vector(1 downto 0)
+        led1 , led2 : out std_logic
     );
 end primeiraparte;
+-- Led1 = LSB
+-- Led2 = MSB
 
 architecture comportamento_moore of primeiraparte is
 	
 	signal clock_out_toplevel: STD_LOGIC;
+	signal saida: std_logic_vector(1 downto 0);
 	
 	component DIVISOR is
 		port(
@@ -36,7 +39,7 @@ begin
     begin
         -- Se o sinal de reset estiver ativo ('1'), 
         -- inicializa o estado atual para RESET.
-        if reset = '1' then
+        if reset = '0' then
             estado_atual <= RESET_estado;
             -- Não é necessário atribuir a "saida" aqui, pois ela será definida no processo combinacional.
         -- Se ocorrer uma borda de subida no sinal de clock,
@@ -47,41 +50,43 @@ begin
     end process;
     
     -- processo para a lógica combinacional da máquina
-    combinacional : process(estado_atual)
-    begin
-        -- Inicializa a saída como '00'.
-        saida <= "00";
-        
-        -- Utiliza uma estrutura de caso para definir a lógica combinacional com base no estado atual.
-        case estado_atual is
-            when RESET_estado =>
-					 saida <=  "00";
-                proximo_estado <= A;
-					 
-                            
-            when A =>
-                -- Para o estado A, a saída permanece '00'.
-					 saida <= "00";
-                proximo_estado <= B;
-					 
-                            
-            when B =>
-                -- Para o estado B, a saída permanece '01'.
-					 saida <= "01";
-                proximo_estado <= C;
-					 
-            
-            when C =>
-                -- Para o estado C, a saída é '10'.
-					 saida <= "10";
-                proximo_estado <= D;
-					 
-            
-            when D =>
-                -- Para o estado D, a saída é '11'.
-					 saida <= "11";
-                proximo_estado <= A;
-					
-        end case;
-    end process;
+combinacional : process(estado_atual)
+begin
+    -- Inicializa a saída como '00'.
+    saida <= "00";
+    
+    -- Utiliza uma estrutura de caso para definir a lógica combinacional com base no estado atual.
+    case estado_atual is
+        when RESET_estado =>
+            saida <= "00";
+            proximo_estado <= A;
+
+        when A =>
+            -- Para o estado A, a saída permanece '00'.
+            saida <= "00";
+            proximo_estado <= B;
+
+        when B =>
+            -- Para o estado B, a saída permanece '01'.
+            saida <= "01";
+            proximo_estado <= C;
+
+        when C =>
+            -- Para o estado C, a saída é '10'.
+            saida <= "10";
+            proximo_estado <= D;
+
+        when D =>
+            -- Para o estado D, a saída é '11'.
+            saida <= "11";
+            proximo_estado <= A;
+
+    end case;
+
+end process;
+
+-- Atribuição dos LEDs
+led1 <= saida(0);
+led2 <= saida(1);
+
 end comportamento_moore;
