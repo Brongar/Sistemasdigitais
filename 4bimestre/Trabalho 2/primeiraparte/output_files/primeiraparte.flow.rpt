@@ -1,5 +1,5 @@
 Flow report for primeiraparte
-Thu Nov 23 14:48:11 2023
+Mon Nov 27 15:11:45 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 23 14:48:11 2023       ;
+; Flow Status                     ; Successful - Mon Nov 27 15:11:45 2023       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; primeiraparte                               ;
 ; Top-level Entity Name           ; primeiraparte                               ;
@@ -49,7 +49,7 @@ agreement for further details.
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 5                                           ;
+; Total registers                 ; 32                                          ;
 ; Total pins                      ; 4                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/23/2023 14:47:04 ;
+; Start date & time ; 11/27/2023 15:11:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; primeiraparte       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 110073159772250.170076162301896        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 110073159772250.170110868208216        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,12 +94,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4843 MB             ; 00:00:47                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4708 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4713 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4709 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4713 MB             ; 00:00:01                           ;
-; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:51                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4836 MB             ; 00:00:49                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,10 +105,6 @@ agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -120,10 +112,6 @@ agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off primeiraparte -c primeiraparte
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off primeiraparte -c primeiraparte --vector_source="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/Waveform.vwf" --testbench_file="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/Waveform.vwf.vht"
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/" primeiraparte -c primeiraparte
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off primeiraparte -c primeiraparte --vector_source="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/Waveform.vwf" --testbench_file="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/Waveform.vwf.vht"
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/" primeiraparte -c primeiraparte
 
 
 

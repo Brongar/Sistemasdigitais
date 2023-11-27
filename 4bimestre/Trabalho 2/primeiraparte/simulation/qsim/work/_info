@@ -8,8 +8,8 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim
-Eprimeiraparte
-Z1 w1700761691
+Edivisor
+Z1 w1701108099
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 cD3@N^MdoDolN5@R6?T[V1
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 3BCIeZzdIHLCX<;R;K38G3
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 PQDYM9fR]Wek<A7X8bA8S1
@@ -24,13 +24,13 @@ Z11 8primeiraparte.vho
 Z12 Fprimeiraparte.vho
 l0
 L39
-VPSkGcGZVFdEcoJKK_1GCS3
-!s100 i_;>JXQ?ac>jT>^mM?04n3
+V?[7gGY`61Wf]KR@HM2fAQ1
+!s100 @QHbg<1Z[iV5C6;]OWaaB2
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1700761692
+Z14 !s110 1701108101
 !i10b 1
-Z15 !s108 1700761692.000000
+Z15 !s108 1701108101.000000
 Z16 !s90 -work|work|primeiraparte.vho|
 Z17 !s107 primeiraparte.vho|
 !i113 1
@@ -46,11 +46,11 @@ R7
 R8
 R9
 R10
-DEx4 work 13 primeiraparte 0 22 PSkGcGZVFdEcoJKK_1GCS3
-l78
-L47
-V3Q>Ca=IAUCQTA[C>hAdU[1
-!s100 _@b4PI8iR4CF872RDnc_O2
+DEx4 work 7 divisor 0 22 ?[7gGY`61Wf]KR@HM2fAQ1
+l70
+L46
+VTdfFi6E8g>CGK4C?ZX2KP0
+!s100 Dddf=Lz<]aZgKgDW48K@k2
 R13
 32
 R14
@@ -61,35 +61,35 @@ R17
 !i113 1
 R18
 R19
-Eprimeiraparte_vhd_vec_tst
-Z20 w1700761689
+Edivisor_vhd_vec_tst
+Z20 w1701108097
 R8
 R9
 R0
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
 l0
 L32
-VcBU`khcN^MDin3CG:ULgG2
-!s100 5<_]InYIX=Uj2nZJ;8kcL2
+V1NPMc1@N84XhWZh3QNf7f3
+!s100 NMg>i;W2jC8dRo@?fLb:b1
 R13
 32
 R14
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform.vwf.vht|
-Z24 !s107 Waveform.vwf.vht|
+Z23 !s90 -work|work|Waveform1.vwf.vht|
+Z24 !s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
-Aprimeiraparte_arch
+Adivisor_arch
 R8
 R9
-Z25 DEx4 work 25 primeiraparte_vhd_vec_tst 0 22 cBU`khcN^MDin3CG:ULgG2
-l47
+DEx4 work 19 divisor_vhd_vec_tst 0 22 1NPMc1@N84XhWZh3QNf7f3
+l45
 L34
-V;ii[1;Wblz32WQ497<UYg0
-!s100 hn7M]z`[<BTKJO=dW4k]`0
+V5]3n=1>AbX=TzaCBRE]Hm0
+!s100 B6oZU;79_?:@T_Lh?cZU:3
 R13
 32
 R14
@@ -97,6 +97,98 @@ R14
 R15
 R23
 R24
+!i113 1
+R18
+R19
+Eprimeiraparte
+Z25 w1701108532
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R0
+R11
+R12
+l0
+L39
+VPSkGcGZVFdEcoJKK_1GCS3
+!s100 i_;>JXQ?ac>jT>^mM?04n3
+R13
+32
+Z26 !s110 1701108534
+!i10b 1
+Z27 !s108 1701108534.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 13 primeiraparte 0 22 PSkGcGZVFdEcoJKK_1GCS3
+l87
+L47
+VnK6I[H7nTm2G6M=i^Fobm0
+!s100 ENg3GkJQ54[Bz=_BMAH=S0
+R13
+32
+R26
+!i10b 1
+R27
+R16
+R17
+!i113 1
+R18
+R19
+Eprimeiraparte_vhd_vec_tst
+Z28 w1701108530
+R8
+R9
+R0
+Z29 8Waveform.vwf.vht
+Z30 FWaveform.vwf.vht
+l0
+L32
+VcBU`khcN^MDin3CG:ULgG2
+!s100 5<_]InYIX=Uj2nZJ;8kcL2
+R13
+32
+R26
+!i10b 1
+R27
+Z31 !s90 -work|work|Waveform.vwf.vht|
+Z32 !s107 Waveform.vwf.vht|
+!i113 1
+R18
+R19
+Aprimeiraparte_arch
+R8
+R9
+Z33 DEx4 work 25 primeiraparte_vhd_vec_tst 0 22 cBU`khcN^MDin3CG:ULgG2
+l47
+L34
+V7:<QU?NTA`Qah5DeWFFSg3
+!s100 8^]M^62KkgAElM[F=PFbR3
+R13
+32
+R26
+!i10b 1
+R27
+R31
+R32
 !i113 1
 R18
 R19

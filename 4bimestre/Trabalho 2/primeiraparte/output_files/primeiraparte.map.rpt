@@ -1,5 +1,5 @@
 Analysis & Synthesis report for primeiraparte
-Thu Nov 23 14:47:24 2023
+Mon Nov 27 15:11:45 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -44,13 +44,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 23 14:47:24 2023       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 27 15:11:45 2023       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; primeiraparte                               ;
 ; Top-level Entity Name           ; primeiraparte                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 5                                           ;
+; Total registers                 ; 32                                          ;
 ; Total pins                      ; 4                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -174,6 +174,7 @@ agreement for further details.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                          ; Library ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
 ; primeiraparte.vhd                ; yes             ; User VHDL File  ; C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/primeiraparte.vhd ;         ;
+; DIVISOR.vhd                      ; yes             ; User VHDL File  ; C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/DIVISOR.vhd       ;         ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -182,35 +183,36 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 3           ;
+; Estimate of Logic utilization (ALMs needed) ; 21          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 3           ;
+; Combinational ALUT usage for logic          ; 36          ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 0           ;
-;     -- 5 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 5           ;
+;     -- 5 input functions                    ; 1           ;
 ;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 3           ;
+;     -- <=3 input functions                  ; 30          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 5           ;
+; Dedicated logic registers                   ; 32          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 4           ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 5           ;
-; Total fan-out                               ; 26          ;
-; Average fan-out                             ; 1.63        ;
+; Maximum fan-out                             ; 27          ;
+; Total fan-out                               ; 194         ;
+; Average fan-out                             ; 2.55        ;
 +---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; |primeiraparte             ; 3 (3)               ; 5 (5)                     ; 0                 ; 0          ; 4    ; 0            ; |primeiraparte      ; primeiraparte ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name   ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------+--------------+
+; |primeiraparte              ; 36 (3)              ; 32 (5)                    ; 0                 ; 0          ; 4    ; 0            ; |primeiraparte                        ; primeiraparte ; work         ;
+;    |DIVISOR:clock_ajustado| ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |primeiraparte|DIVISOR:clock_ajustado ; DIVISOR       ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -233,8 +235,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -248,15 +250,21 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 5                           ;
+; arriav_ff             ; 32                          ;
 ;     CLR               ; 5                           ;
-; arriav_lcell_comb     ; 3                           ;
-;     normal            ; 3                           ;
-;         2 data inputs ; 3                           ;
+;     SCLR              ; 26                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 36                          ;
+;     arith             ; 26                          ;
+;         1 data inputs ; 26                          ;
+;     normal            ; 10                          ;
+;         2 data inputs ; 4                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 5                           ;
 ; boundary_port         ; 4                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.70                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -265,7 +273,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -275,25 +283,30 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 23 14:47:03 2023
+    Info: Processing started: Mon Nov 27 15:11:21 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off primeiraparte -c primeiraparte
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file primeiraparte.vhd
     Info (12022): Found design unit 1: primeiraparte-comportamento_moore File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/primeiraparte.vhd Line: 11
     Info (12023): Found entity 1: primeiraparte File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/primeiraparte.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
+    Info (12022): Found design unit 1: DIVISOR-DIVISOR_arch File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/DIVISOR.vhd Line: 11
+    Info (12023): Found entity 1: DIVISOR File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/DIVISOR.vhd Line: 4
 Info (12127): Elaborating entity "primeiraparte" for the top level hierarchy
+Info (12128): Elaborating entity "DIVISOR" for hierarchy "DIVISOR:clock_ajustado" File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/primeiraparte.vhd Line: 27
+Warning (10540): VHDL Signal Declaration warning at DIVISOR.vhd(13): used explicit default value for signal "prescaler" because signal was never assigned a value File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/DIVISOR.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Thu Nov 23 14:47:24 2023
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:47
+    Info (21061): Implemented 40 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Mon Nov 27 15:11:45 2023
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:50
 
 

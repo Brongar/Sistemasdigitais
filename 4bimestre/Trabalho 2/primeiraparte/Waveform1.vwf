@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off primeiraparte -c primeiraparte --vector_source="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/Waveform.vwf" --testbench_file="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off primeiraparte -c primeiraparte --vector_source="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/Waveform.vwf" --testbench_file="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off primeiraparte -c primeiraparte --vector_source="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/Waveform1.vwf" --testbench_file="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/Waveform1.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off primeiraparte -c primeiraparte --vector_source="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/Waveform1.vwf" --testbench_file="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/Waveform1.vwf.vht"</ttestbench_cmd>
 <fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/" primeiraparte -c primeiraparte</fnetlist_cmd>
 <tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/" primeiraparte -c primeiraparte</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work primeiraparte.vho
-vcom -work work Waveform.vwf.vht
-vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.primeiraparte_vhd_vec_tst
+vcom -work work Waveform1.vwf.vht
+vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.DIVISOR_vhd_vec_tst
 vcd file -direction primeiraparte.msim.vcd
-vcd add -internal primeiraparte_vhd_vec_tst/*
-vcd add -internal primeiraparte_vhd_vec_tst/i1/*
+vcd add -internal DIVISOR_vhd_vec_tst/*
+vcd add -internal DIVISOR_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -21,15 +21,16 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vcom -work work primeiraparte.vho
-vcom -work work Waveform.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax primeiraparte_vhd_vec_tst/i1=primeiraparte_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.primeiraparte_vhd_vec_tst
+vcom -work work Waveform1.vwf.vht
+vsim -novopt -c -t 1ps -sdfmax DIVISOR_vhd_vec_tst/i1=primeiraparte_vhd.sdo -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.DIVISOR_vhd_vec_tst
 vcd file -direction primeiraparte.msim.vcd
-vcd add -internal primeiraparte_vhd_vec_tst/*
-vcd add -internal primeiraparte_vhd_vec_tst/i1/*
+vcd add -internal DIVISOR_vhd_vec_tst/*
+vcd add -internal DIVISOR_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -39,6 +40,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
@@ -78,7 +80,7 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("clock")
+SIGNAL("clock_in")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -88,84 +90,31 @@ SIGNAL("clock")
 	PARENT = "";
 }
 
-SIGNAL("reset")
+SIGNAL("clock_out")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("saida")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 2;
-	LSB_INDEX = 0;
 	DIRECTION = OUTPUT;
 	PARENT = "";
 }
 
-SIGNAL("saida[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "saida";
-}
-
-SIGNAL("saida[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "saida";
-}
-
-TRANSITION_LIST("clock")
+TRANSITION_LIST("clock_in")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 5.0;
 		NODE
 		{
-			REPEAT = 99;
-			LEVEL 0 FOR 5.0;
-			LEVEL 1 FOR 5.0;
+			REPEAT = 50;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
 		}
-		LEVEL 0 FOR 5.0;
 	}
 }
 
-TRANSITION_LIST("reset")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 640.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 180.0;
-	}
-}
-
-TRANSITION_LIST("saida[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("saida[0]")
+TRANSITION_LIST("clock_out")
 {
 	NODE
 	{
@@ -176,7 +125,7 @@ TRANSITION_LIST("saida[0]")
 
 DISPLAY_LINE
 {
-	CHANNEL = "clock";
+	CHANNEL = "clock_in";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -185,41 +134,11 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "reset";
+	CHANNEL = "clock_out";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "saida";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 2;
-	TREE_LEVEL = 0;
-	CHILDREN = 3, 4;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "saida[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 3;
-	TREE_LEVEL = 1;
-	PARENT = 2;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "saida[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 4;
-	TREE_LEVEL = 1;
-	PARENT = 2;
 }
 
 TIME_BAR

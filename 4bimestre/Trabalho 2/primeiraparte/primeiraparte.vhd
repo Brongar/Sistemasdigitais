@@ -9,13 +9,30 @@ entity primeiraparte is
 end primeiraparte;
 
 architecture comportamento_moore of primeiraparte is
+	
+	signal clock_out_toplevel: STD_LOGIC;
+	
+	component DIVISOR is
+		port(
+			  clock_in  : in  STD_LOGIC;
+			  clock_out : buffer STD_LOGIC
+			 );
+	end component;
+
     type estado is (RESET_estado, A, B, C, D);
     signal estado_atual, proximo_estado : estado;
 
 begin 
 
+	clock_ajustado: DIVISOR port map(
+		clock_in => clock,
+		clock_out => clock_out_toplevel
+		);
+
+
+
     -- processo para definição do sincronismo da FSM
-    sincrono : process(clock, reset)
+    sincrono : process(clock_out_toplevel, reset)
     begin
         -- Se o sinal de reset estiver ativo ('1'), 
         -- inicializa o estado atual para RESET.
@@ -24,7 +41,7 @@ begin
             -- Não é necessário atribuir a "saida" aqui, pois ela será definida no processo combinacional.
         -- Se ocorrer uma borda de subida no sinal de clock,
         -- atualiza o estado atual para o próximo estado especificado.
-        elsif rising_edge(clock) then
+        elsif rising_edge(clock_out_toplevel) then
             estado_atual <= proximo_estado;
         end if;
     end process;
