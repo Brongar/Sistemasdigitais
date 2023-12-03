@@ -1,5 +1,5 @@
 Fitter report for primeiraparte
-Mon Nov 27 17:32:26 2023
+Mon Nov 27 20:09:32 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Nov 27 17:32:26 2023       ;
+; Fitter Status                      ; Successful - Mon Nov 27 20:09:32 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; primeiraparte                               ;
 ; Top-level Entity Name              ; primeiraparte                               ;
@@ -152,14 +152,15 @@ agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.3%      ;
+;     Processors 3-4         ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -201,7 +202,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.pin.
+The pin-out file can be found in D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1015,7 +1016,7 @@ Note: This table only shows the top 27 path(s) that have the largest delay added
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device EP4CE22F17C6 for design "primeiraparte"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1037,16 +1038,16 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clock~input (placed in PIN R8 (CLK15, DIFFCLK_6p)) File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/primeiraparte.vhd Line: 6
+Info (176353): Automatically promoted node clock~input (placed in PIN R8 (CLK15, DIFFCLK_6p)) File: D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/primeiraparte.vhd Line: 6
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G18
-Info (176353): Automatically promoted node DIVISOR:clock_ajustado|clock_out  File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/DIVISOR.vhd Line: 7
+Info (176353): Automatically promoted node DIVISOR:clock_ajustado|clock_out  File: D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/DIVISOR.vhd Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node DIVISOR:clock_ajustado|clock_out~0 File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/DIVISOR.vhd Line: 7
+        Info (176357): Destination node DIVISOR:clock_ajustado|clock_out~0 File: D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/DIVISOR.vhd Line: 7
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1059,23 +1060,23 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.fit.smsg
+Info (144001): Generated suppressed messages file D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5252 megabytes
-    Info: Processing ended: Mon Nov 27 17:32:26 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 5512 megabytes
+    Info: Processing ended: Mon Nov 27 20:09:32 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.fit.smsg.
+The suppressed messages can be found in D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.fit.smsg.
 
 

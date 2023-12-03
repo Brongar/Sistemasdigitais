@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Dec 03 19:22:06 2023
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : contador
+Top-level Entity Name : toplevel
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 466 / 22,320 ( 2 % )
+    Total combinational functions : 459 / 22,320 ( 2 % )
+    Dedicated logic registers : 248 / 22,320 ( 1 % )
+Total registers : 248
+Total pins : 14 / 154 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

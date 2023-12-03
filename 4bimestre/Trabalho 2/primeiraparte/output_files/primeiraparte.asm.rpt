@@ -1,5 +1,5 @@
 Assembler report for primeiraparte
-Mon Nov 27 17:32:30 2023
+Mon Nov 27 20:09:41 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.sof
+  5. Assembler Device Options: D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 27 17:32:30 2023 ;
+; Assembler Status      ; Successful - Mon Nov 27 20:09:41 2023 ;
 ; Revision Name         ; primeiraparte                         ;
 ; Top-level Entity Name ; primeiraparte                         ;
 ; Family                ; Cyclone IV E                          ;
@@ -53,23 +53,23 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.sof ;
-+--------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                               ;
++---------------------------------------------------------------------------------------------------------+
+; File Name                                                                                               ;
++---------------------------------------------------------------------------------------------------------+
+; D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.sof ;
++---------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.sof ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                     ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0013B97F                                                                                                                  ;
-; Checksum       ; 0x0013B97F                                                                                                                  ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/output_files/primeiraparte.sof ;
++----------------+------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                          ;
++----------------+------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0013B97F                                                                                                       ;
+; Checksum       ; 0x0013B97F                                                                                                       ;
++----------------+------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,15 +78,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Nov 27 17:32:28 2023
+    Info: Processing started: Mon Nov 27 20:09:37 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off primeiraparte -c primeiraparte
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4670 megabytes
-    Info: Processing ended: Mon Nov 27 17:32:30 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4671 megabytes
+    Info: Processing ended: Mon Nov 27 20:09:41 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
 
 

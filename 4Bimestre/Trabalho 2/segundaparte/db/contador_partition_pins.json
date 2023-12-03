@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "saida_display[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_display[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_display[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_display[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_mux_7bit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_mux_7bit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_mux_7bit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_mux_7bit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_mux_7bit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_mux_7bit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_mux_7bit[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_top",
+					"strict" : false
+				},
+				{
+					"name" : "clock_top",
+					"strict" : false
+				},
+				{
+					"name" : "botao_seletor",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

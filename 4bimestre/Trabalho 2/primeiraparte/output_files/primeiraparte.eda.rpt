@@ -1,5 +1,5 @@
 EDA Netlist Writer report for primeiraparte
-Mon Nov 27 16:13:55 2023
+Mon Nov 27 21:04:49 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 27 16:13:55 2023 ;
+; EDA Netlist Writer Status ; Successful - Mon Nov 27 21:04:49 2023 ;
 ; Revision Name             ; primeiraparte                         ;
-; Top-level Entity Name     ; primeiraparte                         ;
+; Top-level Entity Name     ; DIVISOR                               ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,13 +66,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                             ;
-+------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                        ;
-+------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim//primeiraparte.vho ;
-+------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                  ;
++-------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                             ;
++-------------------------------------------------------------------------------------------------------------+
+; D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/simulation/qsim//primeiraparte.vho ;
++-------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,15 +95,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Mon Nov 27 16:13:53 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim/" primeiraparte -c primeiraparte
+    Info: Processing started: Mon Nov 27 21:04:48 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/simulation/qsim/" primeiraparte -c primeiraparte
 Info (119006): Selected device EP4CE22F17C6 for design "primeiraparte"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file primeiraparte.vho in folder "C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/primeiraparte/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file primeiraparte.vho in folder "D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Mon Nov 27 16:13:55 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon Nov 27 21:04:49 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

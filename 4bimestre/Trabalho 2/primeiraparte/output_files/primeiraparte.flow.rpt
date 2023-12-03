@@ -1,5 +1,5 @@
 Flow report for primeiraparte
-Mon Nov 27 17:32:35 2023
+Mon Nov 27 21:04:49 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 27 17:32:30 2023       ;
+; Flow Status                        ; Successful - Mon Nov 27 21:04:49 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; primeiraparte                               ;
-; Top-level Entity Name              ; primeiraparte                               ;
+; Top-level Entity Name              ; DIVISOR                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 54 / 22,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 51 / 22,320 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 32 / 22,320 ( < 1 % )                       ;
-; Total registers                    ; 32                                          ;
-; Total pins                         ; 4 / 154 ( 3 % )                             ;
+; Total logic elements               ; 6                                           ;
+;     Total combinational functions  ; 6                                           ;
+;     Dedicated logic registers      ; 5                                           ;
+; Total registers                    ; 5                                           ;
+; Total pins                         ; 2                                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/27/2023 17:31:55 ;
+; Start date & time ; 11/27/2023 21:02:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; primeiraparte       ;
 +-------------------+---------------------+
@@ -76,50 +76,54 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 110073159772250.170111711411636        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 277807426625206.170112977505496        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DIVISOR     ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DIVISOR     ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; DIVISOR     ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; DIVISOR                                ; primeiraparte ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 4782 MB             ; 00:00:48                           ;
-; Fitter                    ; 00:00:10     ; 1.0                     ; 5252 MB             ; 00:00:13                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4669 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4749 MB             ; 00:00:04                           ;
-; Total                     ; 00:00:37     ; --                      ; --                  ; 00:01:07                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4781 MB             ; 00:00:28                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4629 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4634 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4634 MB             ; 00:00:01                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:32                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; Brongar          ; Windows 10 ; 10.0       ; x86_64         ;
-+---------------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-SC65Q9I  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-SC65Q9I  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-SC65Q9I  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-SC65Q9I  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-SC65Q9I  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off primeiraparte -c primeiraparte
-quartus_fit --read_settings_files=off --write_settings_files=off primeiraparte -c primeiraparte
-quartus_asm --read_settings_files=off --write_settings_files=off primeiraparte -c primeiraparte
-quartus_sta primeiraparte -c primeiraparte
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off primeiraparte -c primeiraparte --vector_source="D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/Waveform4.vwf" --testbench_file="D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/simulation/qsim/Waveform4.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/simulation/qsim/" primeiraparte -c primeiraparte
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off primeiraparte -c primeiraparte --vector_source="D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/Waveform4.vwf" --testbench_file="D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/simulation/qsim/Waveform4.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="D:/Documentos/GitHub/Sistemasdigitais/4Bimestre/Trabalho 2/primeiraparte/simulation/qsim/" primeiraparte -c primeiraparte
 
 
 

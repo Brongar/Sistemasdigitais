@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Nov 27 17:32:15 2023
+Analysis & Synthesis Status : Successful - Mon Nov 27 21:03:10 2023
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : primeiraparte
-Top-level Entity Name : primeiraparte
+Top-level Entity Name : DIVISOR
 Family : Cyclone IV E
-Total logic elements : 54
-    Total combinational functions : 50
-    Dedicated logic registers : 32
-Total registers : 32
-Total pins : 4
+Total logic elements : 6
+    Total combinational functions : 6
+    Dedicated logic registers : 5
+Total registers : 5
+Total pins : 2
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

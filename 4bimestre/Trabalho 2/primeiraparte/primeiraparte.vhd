@@ -15,6 +15,9 @@ architecture comportamento_moore of primeiraparte is
 	signal clock_out_toplevel: STD_LOGIC;
 	signal saida: std_logic_vector(1 downto 0);
 	
+	
+	
+	--50MHz
 	component DIVISOR is
 		port(
 			  clock_in  : in  STD_LOGIC;
@@ -22,6 +25,8 @@ architecture comportamento_moore of primeiraparte is
 			 );
 	end component;
 
+	
+	
     type estado is (RESET_estado, A, B, C, D);
     signal estado_atual, proximo_estado : estado;
 
@@ -41,7 +46,7 @@ begin
         -- inicializa o estado atual para RESET.
         if reset = '0' then
             estado_atual <= RESET_estado;
-            -- Não é necessário atribuir a "saida" aqui, pois ela será definida no processo combinacional.
+            
         -- Se ocorrer uma borda de subida no sinal de clock,
         -- atualiza o estado atual para o próximo estado especificado.
         elsif rising_edge(clock_out_toplevel) then
