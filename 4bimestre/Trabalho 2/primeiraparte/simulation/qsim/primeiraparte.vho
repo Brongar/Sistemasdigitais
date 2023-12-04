@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
--- DATE "11/27/2023 16:13:55"
+-- DATE "11/28/2023 13:26:29"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -34,16 +34,14 @@ USE ALTERA.ALTERA_PRIMITIVES_COMPONENTS.ALL;
 USE CYCLONEIVE.CYCLONEIVE_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY 	primeiraparte IS
+ENTITY 	DIVISOR IS
     PORT (
-	reset : IN std_logic;
-	clock : IN std_logic;
-	led1 : BUFFER std_logic;
-	led2 : BUFFER std_logic
+	clock_in : IN std_logic;
+	clock_out : BUFFER std_logic
 	);
-END primeiraparte;
+END DIVISOR;
 
-ARCHITECTURE structure OF primeiraparte IS
+ARCHITECTURE structure OF DIVISOR IS
 SIGNAL gnd : std_logic := '0';
 SIGNAL vcc : std_logic := '1';
 SIGNAL unknown : std_logic := 'X';
@@ -53,78 +51,48 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_reset : std_logic;
-SIGNAL ww_clock : std_logic;
-SIGNAL ww_led1 : std_logic;
-SIGNAL ww_led2 : std_logic;
-SIGNAL \led1~output_o\ : std_logic;
-SIGNAL \led2~output_o\ : std_logic;
-SIGNAL \clock~input_o\ : std_logic;
-SIGNAL \clock_ajustado|counter[0]~3_combout\ : std_logic;
-SIGNAL \clock_ajustado|counter[2]~2_combout\ : std_logic;
-SIGNAL \clock_ajustado|counter~1_combout\ : std_logic;
-SIGNAL \clock_ajustado|counter~0_combout\ : std_logic;
-SIGNAL \clock_ajustado|Equal0~0_combout\ : std_logic;
-SIGNAL \clock_ajustado|clock_out~0_combout\ : std_logic;
-SIGNAL \clock_ajustado|clock_out~q\ : std_logic;
-SIGNAL \reset~input_o\ : std_logic;
-SIGNAL \estado_atual.C~q\ : std_logic;
-SIGNAL \estado_atual.D~q\ : std_logic;
-SIGNAL \estado_atual.RESET_estado~q\ : std_logic;
-SIGNAL \proximo_estado.A~combout\ : std_logic;
-SIGNAL \estado_atual.A~q\ : std_logic;
-SIGNAL \estado_atual.B~q\ : std_logic;
-SIGNAL \saida~3_combout\ : std_logic;
-SIGNAL \saida~4_combout\ : std_logic;
-SIGNAL \clock_ajustado|counter\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \ALT_INV_reset~input_o\ : std_logic;
+SIGNAL ww_clock_in : std_logic;
+SIGNAL ww_clock_out : std_logic;
+SIGNAL \clock_out~output_o\ : std_logic;
+SIGNAL \clock_in~input_o\ : std_logic;
+SIGNAL \counter[0]~1_combout\ : std_logic;
+SIGNAL \counter[1]~0_combout\ : std_logic;
+SIGNAL \clock_out~0_combout\ : std_logic;
+SIGNAL \clock_out~reg0_q\ : std_logic;
+SIGNAL counter : std_logic_vector(1 DOWNTO 0);
 
 BEGIN
 
-ww_reset <= reset;
-ww_clock <= clock;
-led1 <= ww_led1;
-led2 <= ww_led2;
+ww_clock_in <= clock_in;
+clock_out <= ww_clock_out;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_reset~input_o\ <= NOT \reset~input_o\;
 
-\led1~output\ : cycloneive_io_obuf
+\clock_out~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \saida~3_combout\,
+	i => \clock_out~reg0_q\,
 	devoe => ww_devoe,
-	o => \led1~output_o\);
+	o => \clock_out~output_o\);
 
-\led2~output\ : cycloneive_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \saida~4_combout\,
-	devoe => ww_devoe,
-	o => \led2~output_o\);
-
-\clock~input\ : cycloneive_io_ibuf
+\clock_in~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_clock,
-	o => \clock~input_o\);
+	i => ww_clock_in,
+	o => \clock_in~input_o\);
 
-\clock_ajustado|counter[0]~3\ : cycloneive_lcell_comb
+\counter[0]~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \clock_ajustado|counter[0]~3_combout\ = !\clock_ajustado|counter\(0)
+-- \counter[0]~1_combout\ = !counter(0)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -132,128 +100,25 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \clock_ajustado|counter\(0),
-	combout => \clock_ajustado|counter[0]~3_combout\);
+	dataa => counter(0),
+	combout => \counter[0]~1_combout\);
 
-\clock_ajustado|counter[0]\ : dffeas
+\counter[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \clock~input_o\,
-	d => \clock_ajustado|counter[0]~3_combout\,
+	clk => \clock_in~input_o\,
+	d => \counter[0]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \clock_ajustado|counter\(0));
+	q => counter(0));
 
-\clock_ajustado|counter[2]~2\ : cycloneive_lcell_comb
+\counter[1]~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \clock_ajustado|counter[2]~2_combout\ = \clock_ajustado|counter\(2) $ (((\clock_ajustado|counter\(1) & \clock_ajustado|counter\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110011001100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \clock_ajustado|counter\(2),
-	datac => \clock_ajustado|counter\(1),
-	datad => \clock_ajustado|counter\(0),
-	combout => \clock_ajustado|counter[2]~2_combout\);
-
-\clock_ajustado|counter[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock~input_o\,
-	d => \clock_ajustado|counter[2]~2_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \clock_ajustado|counter\(2));
-
-\clock_ajustado|counter~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \clock_ajustado|counter~1_combout\ = (\clock_ajustado|counter\(1) & (((!\clock_ajustado|counter\(0))))) # (!\clock_ajustado|counter\(1) & (\clock_ajustado|counter\(0) & ((\clock_ajustado|counter\(2)) # (!\clock_ajustado|counter\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101111110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \clock_ajustado|counter\(2),
-	datab => \clock_ajustado|counter\(3),
-	datac => \clock_ajustado|counter\(1),
-	datad => \clock_ajustado|counter\(0),
-	combout => \clock_ajustado|counter~1_combout\);
-
-\clock_ajustado|counter[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock~input_o\,
-	d => \clock_ajustado|counter~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \clock_ajustado|counter\(1));
-
-\clock_ajustado|counter~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \clock_ajustado|counter~0_combout\ = (\clock_ajustado|counter\(3) & ((\clock_ajustado|counter\(1) $ (\clock_ajustado|counter\(2))) # (!\clock_ajustado|counter\(0)))) # (!\clock_ajustado|counter\(3) & (\clock_ajustado|counter\(1) & 
--- (\clock_ajustado|counter\(2) & \clock_ajustado|counter\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110100010101010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \clock_ajustado|counter\(3),
-	datab => \clock_ajustado|counter\(1),
-	datac => \clock_ajustado|counter\(2),
-	datad => \clock_ajustado|counter\(0),
-	combout => \clock_ajustado|counter~0_combout\);
-
-\clock_ajustado|counter[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock~input_o\,
-	d => \clock_ajustado|counter~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \clock_ajustado|counter\(3));
-
-\clock_ajustado|Equal0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \clock_ajustado|Equal0~0_combout\ = (\clock_ajustado|counter\(0) & (\clock_ajustado|counter\(3) & (!\clock_ajustado|counter\(1) & !\clock_ajustado|counter\(2))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \clock_ajustado|counter\(0),
-	datab => \clock_ajustado|counter\(3),
-	datac => \clock_ajustado|counter\(1),
-	datad => \clock_ajustado|counter\(2),
-	combout => \clock_ajustado|Equal0~0_combout\);
-
-\clock_ajustado|clock_out~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \clock_ajustado|clock_out~0_combout\ = \clock_ajustado|clock_out~q\ $ (\clock_ajustado|Equal0~0_combout\)
+-- \counter[1]~0_combout\ = counter(1) $ (counter(0))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -261,148 +126,52 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \clock_ajustado|clock_out~q\,
-	datad => \clock_ajustado|Equal0~0_combout\,
-	combout => \clock_ajustado|clock_out~0_combout\);
+	datac => counter(1),
+	datad => counter(0),
+	combout => \counter[1]~0_combout\);
 
-\clock_ajustado|clock_out\ : dffeas
+\counter[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \clock~input_o\,
-	d => \clock_ajustado|clock_out~0_combout\,
+	clk => \clock_in~input_o\,
+	d => \counter[1]~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \clock_ajustado|clock_out~q\);
+	q => counter(1));
 
-\reset~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_reset,
-	o => \reset~input_o\);
-
-\estado_atual.C\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_ajustado|clock_out~q\,
-	d => \estado_atual.B~q\,
-	clrn => \ALT_INV_reset~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \estado_atual.C~q\);
-
-\estado_atual.D\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_ajustado|clock_out~q\,
-	d => \estado_atual.C~q\,
-	clrn => \ALT_INV_reset~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \estado_atual.D~q\);
-
-\estado_atual.RESET_estado\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_ajustado|clock_out~q\,
-	d => VCC,
-	clrn => \ALT_INV_reset~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \estado_atual.RESET_estado~q\);
-
-\proximo_estado.A\ : cycloneive_lcell_comb
+\clock_out~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \proximo_estado.A~combout\ = (\estado_atual.D~q\) # (!\estado_atual.RESET_estado~q\)
+-- \clock_out~0_combout\ = \clock_out~reg0_q\ $ (((counter(1) & counter(0))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101011111111",
+	lut_mask => "0011110011001100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \estado_atual.D~q\,
-	datad => \estado_atual.RESET_estado~q\,
-	combout => \proximo_estado.A~combout\);
+	datab => \clock_out~reg0_q\,
+	datac => counter(1),
+	datad => counter(0),
+	combout => \clock_out~0_combout\);
 
-\estado_atual.A\ : dffeas
+\clock_out~reg0\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \clock_ajustado|clock_out~q\,
-	d => \proximo_estado.A~combout\,
-	clrn => \ALT_INV_reset~input_o\,
+	clk => \clock_in~input_o\,
+	d => \clock_out~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \estado_atual.A~q\);
+	q => \clock_out~reg0_q\);
 
-\estado_atual.B\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \clock_ajustado|clock_out~q\,
-	d => \estado_atual.A~q\,
-	clrn => \ALT_INV_reset~input_o\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \estado_atual.B~q\);
-
-\saida~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \saida~3_combout\ = (\estado_atual.B~q\) # (\estado_atual.D~q\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111011101110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \estado_atual.B~q\,
-	datab => \estado_atual.D~q\,
-	combout => \saida~3_combout\);
-
-\saida~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \saida~4_combout\ = (\estado_atual.D~q\) # (\estado_atual.C~q\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1110111011101110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \estado_atual.D~q\,
-	datab => \estado_atual.C~q\,
-	combout => \saida~4_combout\);
-
-ww_led1 <= \led1~output_o\;
-
-ww_led2 <= \led2~output_o\;
+ww_clock_out <= \clock_out~output_o\;
 END structure;
 
 

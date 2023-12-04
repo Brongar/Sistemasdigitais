@@ -1,5 +1,5 @@
 Flow report for primeiraparte
-Mon Nov 27 17:32:35 2023
+Tue Nov 28 13:41:04 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 27 17:32:30 2023       ;
+; Flow Status                        ; Successful - Tue Nov 28 13:40:59 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; primeiraparte                               ;
 ; Top-level Entity Name              ; primeiraparte                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 54 / 22,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 51 / 22,320 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 32 / 22,320 ( < 1 % )                       ;
-; Total registers                    ; 32                                          ;
+; Total logic elements               ; 53 / 22,320 ( < 1 % )                       ;
+;     Total combinational functions  ; 50 / 22,320 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 31 / 22,320 ( < 1 % )                       ;
+; Total registers                    ; 31                                          ;
 ; Total pins                         ; 4 / 154 ( 3 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/27/2023 17:31:55 ;
+; Start date & time ; 11/28/2023 13:40:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; primeiraparte       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 110073159772250.170111711411636        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 110073159772250.170118962512924        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -93,11 +93,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 4782 MB             ; 00:00:48                           ;
-; Fitter                    ; 00:00:10     ; 1.0                     ; 5252 MB             ; 00:00:13                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4669 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4749 MB             ; 00:00:04                           ;
-; Total                     ; 00:00:37     ; --                      ; --                  ; 00:01:07                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 4780 MB             ; 00:00:46                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 5255 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4670 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:36     ; --                      ; --                  ; 00:01:02                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
