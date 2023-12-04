@@ -1,0 +1,60 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use  ieee.std_logic_arith.all;
+
+entity contador is
+	port (
+			clk, reset : in std_logic;
+			saida1, saida2, saida3, saida4 : out std_logic_vector(3 downto 0));
+			
+end contador;
+
+architecture comportamento_contador of contador is
+
+	signal cont1, cont2, cont3, cont4 : integer;
+
+begin
+	
+	-- accountant process
+	-- cont4 is the least significant number
+	-- cont1	is the most significant number
+	nome: process(clk, reset)
+		begin
+		 
+			if  reset = '1' then
+				cont1 <= 0;
+				cont2 <= 0;
+				cont3 <= 0;
+				cont4 <= 0;
+			else
+				if rising_edge(clk) then
+					cont4 <= cont4 + 1;
+					if cont4 = 10 then
+						cont4 <= 0;
+						cont3 <= cont3 + 1;
+						
+						if cont3 = 10 then
+							cont3 <= 0;
+							cont2 <= cont2 + 1;
+						
+							if cont2 = 10 then
+								cont2 <= 0;
+								cont1 <= cont1 + 1;
+								
+								if cont1 = 10 then
+									cont1 <= 0;
+								end if;
+							end if;
+						end if;
+					end if;
+				end if;
+			end if;
+	
+	end process;
+	
+	saida1 <= conv_std_logic_vector(cont1, 4);
+	saida2 <= conv_std_logic_vector(cont2, 4);
+	saida3 <= conv_std_logic_vector(cont3, 4);
+	saida4 <= conv_std_logic_vector(cont4, 4);
+	
+end comportamento_contador;

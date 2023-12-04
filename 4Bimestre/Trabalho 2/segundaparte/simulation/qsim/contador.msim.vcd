@@ -1,0 +1,3890 @@
+$comment
+	File created using the following command:
+		vcd file contador.msim.vcd -direction
+$end
+$date
+	Sat Dec 02 21:53:08 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module toplevel_vhd_vec_tst $end
+$var wire 1 ! botao_seletor $end
+$var wire 1 " clock_top $end
+$var wire 1 # reset_top $end
+$var wire 1 $ saida_teste [3] $end
+$var wire 1 % saida_teste [2] $end
+$var wire 1 & saida_teste [1] $end
+$var wire 1 ' saida_teste [0] $end
+
+$scope module i1 $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vcc $end
+$var wire 1 * unknown $end
+$var wire 1 + devoe $end
+$var wire 1 , devclrn $end
+$var wire 1 - devpor $end
+$var wire 1 . ww_devoe $end
+$var wire 1 / ww_devclrn $end
+$var wire 1 0 ww_devpor $end
+$var wire 1 1 ww_botao_seletor $end
+$var wire 1 2 ww_reset_top $end
+$var wire 1 3 ww_clock_top $end
+$var wire 1 4 ww_saida_teste [3] $end
+$var wire 1 5 ww_saida_teste [2] $end
+$var wire 1 6 ww_saida_teste [1] $end
+$var wire 1 7 ww_saida_teste [0] $end
+$var wire 1 8 \botao_seletor~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 9 \botao_seletor~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 : \botao_seletor~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 ; \botao_seletor~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 < \control_inst|MUX_inst|clock_saida~clkctrl_INCLK_bus\ [3] $end
+$var wire 1 = \control_inst|MUX_inst|clock_saida~clkctrl_INCLK_bus\ [2] $end
+$var wire 1 > \control_inst|MUX_inst|clock_saida~clkctrl_INCLK_bus\ [1] $end
+$var wire 1 ? \control_inst|MUX_inst|clock_saida~clkctrl_INCLK_bus\ [0] $end
+$var wire 1 @ \reset_top~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 A \reset_top~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 B \reset_top~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 C \reset_top~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 D \clock_top~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 E \clock_top~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 F \clock_top~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 G \clock_top~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 H \saida_teste[0]~output_o\ $end
+$var wire 1 I \saida_teste[1]~output_o\ $end
+$var wire 1 J \saida_teste[2]~output_o\ $end
+$var wire 1 K \saida_teste[3]~output_o\ $end
+$var wire 1 L \botao_seletor~input_o\ $end
+$var wire 1 M \botao_seletor~inputclkctrl_outclk\ $end
+$var wire 1 N \control_inst|estado_atual.D~feeder_combout\ $end
+$var wire 1 O \reset_top~input_o\ $end
+$var wire 1 P \reset_top~inputclkctrl_outclk\ $end
+$var wire 1 Q \control_inst|estado_atual.D~q\ $end
+$var wire 1 R \control_inst|estado_atual.RESET_estado~feeder_combout\ $end
+$var wire 1 S \control_inst|estado_atual.RESET_estado~q\ $end
+$var wire 1 T \control_inst|proximo_estado.A~combout\ $end
+$var wire 1 U \control_inst|estado_atual.A~feeder_combout\ $end
+$var wire 1 V \control_inst|estado_atual.A~q\ $end
+$var wire 1 W \control_inst|estado_atual.B~feeder_combout\ $end
+$var wire 1 X \control_inst|estado_atual.B~q\ $end
+$var wire 1 Y \control_inst|estado_atual.C~feeder_combout\ $end
+$var wire 1 Z \control_inst|estado_atual.C~q\ $end
+$var wire 1 [ \control_inst|MUX_inst|Equal0~2_combout\ $end
+$var wire 1 \ \clock_top~input_o\ $end
+$var wire 1 ] \clock_top~inputclkctrl_outclk\ $end
+$var wire 1 ^ \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~0_combout\ $end
+$var wire 1 _ \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~1\ $end
+$var wire 1 ` \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~2_combout\ $end
+$var wire 1 a \control_inst|MUX_inst|DIVISOR_5MHz_inst|clock_out~0_combout\ $end
+$var wire 1 b \control_inst|MUX_inst|DIVISOR_5MHz_inst|clock_out~q\ $end
+$var wire 1 c \control_inst|MUX_inst|Equal0~1_combout\ $end
+$var wire 1 d \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~3\ $end
+$var wire 1 e \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~4_combout\ $end
+$var wire 1 f \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~5\ $end
+$var wire 1 g \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~6_combout\ $end
+$var wire 1 h \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~7\ $end
+$var wire 1 i \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~8_combout\ $end
+$var wire 1 j \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~9\ $end
+$var wire 1 k \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~10_combout\ $end
+$var wire 1 l \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~1_cout\ $end
+$var wire 1 m \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~3_cout\ $end
+$var wire 1 n \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~5_cout\ $end
+$var wire 1 o \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~7_cout\ $end
+$var wire 1 p \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~9_cout\ $end
+$var wire 1 q \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~10_combout\ $end
+$var wire 1 r \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~15\ $end
+$var wire 1 s \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~16_combout\ $end
+$var wire 1 t \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~17\ $end
+$var wire 1 u \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~18_combout\ $end
+$var wire 1 v \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~19\ $end
+$var wire 1 w \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~20_combout\ $end
+$var wire 1 x \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~8_combout\ $end
+$var wire 1 y \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~21\ $end
+$var wire 1 z \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~22_combout\ $end
+$var wire 1 { \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~7_combout\ $end
+$var wire 1 | \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~23\ $end
+$var wire 1 } \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~24_combout\ $end
+$var wire 1 ~ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~6_combout\ $end
+$var wire 1 !! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~25\ $end
+$var wire 1 "! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~26_combout\ $end
+$var wire 1 #! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~5_combout\ $end
+$var wire 1 $! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~27\ $end
+$var wire 1 %! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~28_combout\ $end
+$var wire 1 &! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~29\ $end
+$var wire 1 '! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~30_combout\ $end
+$var wire 1 (! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~4_combout\ $end
+$var wire 1 )! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Equal0~0_combout\ $end
+$var wire 1 *! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~0_combout\ $end
+$var wire 1 +! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~8_combout\ $end
+$var wire 1 ,! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Equal0~1_combout\ $end
+$var wire 1 -! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Equal0~2_combout\ $end
+$var wire 1 .! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~31\ $end
+$var wire 1 /! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~32_combout\ $end
+$var wire 1 0! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~33\ $end
+$var wire 1 1! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~34_combout\ $end
+$var wire 1 2! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~10_combout\ $end
+$var wire 1 3! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~35\ $end
+$var wire 1 4! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~36_combout\ $end
+$var wire 1 5! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~11_combout\ $end
+$var wire 1 6! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~37\ $end
+$var wire 1 7! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~38_combout\ $end
+$var wire 1 8! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~12_combout\ $end
+$var wire 1 9! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~39\ $end
+$var wire 1 :! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~40_combout\ $end
+$var wire 1 ;! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~14_combout\ $end
+$var wire 1 <! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~41\ $end
+$var wire 1 =! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~42_combout\ $end
+$var wire 1 >! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~15_combout\ $end
+$var wire 1 ?! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~43\ $end
+$var wire 1 @! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~44_combout\ $end
+$var wire 1 A! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~45\ $end
+$var wire 1 B! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~46_combout\ $end
+$var wire 1 C! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~13_combout\ $end
+$var wire 1 D! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Equal0~4_combout\ $end
+$var wire 1 E! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Equal0~5_combout\ $end
+$var wire 1 F! \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter~9_combout\ $end
+$var wire 1 G! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~11\ $end
+$var wire 1 H! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~12_combout\ $end
+$var wire 1 I! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~13\ $end
+$var wire 1 J! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Add0~14_combout\ $end
+$var wire 1 K! \control_inst|MUX_inst|DIVISOR_25MHz_inst|Equal0~3_combout\ $end
+$var wire 1 L! \control_inst|MUX_inst|DIVISOR_25MHz_inst|clock_out~0_combout\ $end
+$var wire 1 M! \control_inst|MUX_inst|DIVISOR_25MHz_inst|clock_out~q\ $end
+$var wire 1 N! \control_inst|MUX_inst|Equal0~0_combout\ $end
+$var wire 1 O! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~11\ $end
+$var wire 1 P! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~12_combout\ $end
+$var wire 1 Q! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~1_combout\ $end
+$var wire 1 R! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~13\ $end
+$var wire 1 S! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~14_combout\ $end
+$var wire 1 T! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~11_combout\ $end
+$var wire 1 U! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~15\ $end
+$var wire 1 V! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~16_combout\ $end
+$var wire 1 W! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~17\ $end
+$var wire 1 X! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~18_combout\ $end
+$var wire 1 Y! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~19\ $end
+$var wire 1 Z! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~20_combout\ $end
+$var wire 1 [! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~21\ $end
+$var wire 1 \! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~22_combout\ $end
+$var wire 1 ]! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~23\ $end
+$var wire 1 ^! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~24_combout\ $end
+$var wire 1 _! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~10_combout\ $end
+$var wire 1 `! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~25\ $end
+$var wire 1 a! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~26_combout\ $end
+$var wire 1 b! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~9_combout\ $end
+$var wire 1 c! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~27\ $end
+$var wire 1 d! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~28_combout\ $end
+$var wire 1 e! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~8_combout\ $end
+$var wire 1 f! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~29\ $end
+$var wire 1 g! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~30_combout\ $end
+$var wire 1 h! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~7_combout\ $end
+$var wire 1 i! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~31\ $end
+$var wire 1 j! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~32_combout\ $end
+$var wire 1 k! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~33\ $end
+$var wire 1 l! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~35\ $end
+$var wire 1 m! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~36_combout\ $end
+$var wire 1 n! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~37\ $end
+$var wire 1 o! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~38_combout\ $end
+$var wire 1 p! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~12_combout\ $end
+$var wire 1 q! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~39\ $end
+$var wire 1 r! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~40_combout\ $end
+$var wire 1 s! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~15_combout\ $end
+$var wire 1 t! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~41\ $end
+$var wire 1 u! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~42_combout\ $end
+$var wire 1 v! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~16_combout\ $end
+$var wire 1 w! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~43\ $end
+$var wire 1 x! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~44_combout\ $end
+$var wire 1 y! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~17_combout\ $end
+$var wire 1 z! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~45\ $end
+$var wire 1 {! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~46_combout\ $end
+$var wire 1 |! \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~13_combout\ $end
+$var wire 1 }! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~47\ $end
+$var wire 1 ~! \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~48_combout\ $end
+$var wire 1 !" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~49\ $end
+$var wire 1 "" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~50_combout\ $end
+$var wire 1 #" \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~14_combout\ $end
+$var wire 1 $" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~6_combout\ $end
+$var wire 1 %" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~3_combout\ $end
+$var wire 1 &" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~4_combout\ $end
+$var wire 1 '" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~5_combout\ $end
+$var wire 1 (" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~7_combout\ $end
+$var wire 1 )" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Add0~34_combout\ $end
+$var wire 1 *" \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter~6_combout\ $end
+$var wire 1 +" \control_inst|MUX_inst|DIVISOR_50MHz_inst|Equal0~2_combout\ $end
+$var wire 1 ," \control_inst|MUX_inst|DIVISOR_50MHz_inst|clock_out~0_combout\ $end
+$var wire 1 -" \control_inst|MUX_inst|DIVISOR_50MHz_inst|clock_out~q\ $end
+$var wire 1 ." \control_inst|MUX_inst|clock_saida~2_combout\ $end
+$var wire 1 /" \control_inst|MUX_inst|clock_saida~1_combout\ $end
+$var wire 1 0" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~1_cout\ $end
+$var wire 1 1" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~3_cout\ $end
+$var wire 1 2" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~5_cout\ $end
+$var wire 1 3" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~7_cout\ $end
+$var wire 1 4" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~9_cout\ $end
+$var wire 1 5" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~11_cout\ $end
+$var wire 1 6" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~12_combout\ $end
+$var wire 1 7" \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter~3_combout\ $end
+$var wire 1 8" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~13\ $end
+$var wire 1 9" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~14_combout\ $end
+$var wire 1 :" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~15\ $end
+$var wire 1 ;" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~16_combout\ $end
+$var wire 1 <" \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter~2_combout\ $end
+$var wire 1 =" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~17\ $end
+$var wire 1 >" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~18_combout\ $end
+$var wire 1 ?" \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter~1_combout\ $end
+$var wire 1 @" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~19\ $end
+$var wire 1 A" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~20_combout\ $end
+$var wire 1 B" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~21\ $end
+$var wire 1 C" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~23\ $end
+$var wire 1 D" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~24_combout\ $end
+$var wire 1 E" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~25\ $end
+$var wire 1 F" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~26_combout\ $end
+$var wire 1 G" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~27\ $end
+$var wire 1 H" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~28_combout\ $end
+$var wire 1 I" \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter~4_combout\ $end
+$var wire 1 J" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~29\ $end
+$var wire 1 K" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~30_combout\ $end
+$var wire 1 L" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~31\ $end
+$var wire 1 M" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~32_combout\ $end
+$var wire 1 N" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~33\ $end
+$var wire 1 O" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~34_combout\ $end
+$var wire 1 P" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~35\ $end
+$var wire 1 Q" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~36_combout\ $end
+$var wire 1 R" \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter~6_combout\ $end
+$var wire 1 S" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~37\ $end
+$var wire 1 T" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~38_combout\ $end
+$var wire 1 U" \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter~7_combout\ $end
+$var wire 1 V" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~39\ $end
+$var wire 1 W" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~40_combout\ $end
+$var wire 1 X" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~41\ $end
+$var wire 1 Y" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~42_combout\ $end
+$var wire 1 Z" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~43\ $end
+$var wire 1 [" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~44_combout\ $end
+$var wire 1 \" \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter~5_combout\ $end
+$var wire 1 ]" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Equal0~1_combout\ $end
+$var wire 1 ^" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Equal0~2_combout\ $end
+$var wire 1 _" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Equal0~3_combout\ $end
+$var wire 1 `" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Equal0~4_combout\ $end
+$var wire 1 a" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Add0~22_combout\ $end
+$var wire 1 b" \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter~0_combout\ $end
+$var wire 1 c" \control_inst|MUX_inst|DIVISOR_10MHz_inst|Equal0~0_combout\ $end
+$var wire 1 d" \control_inst|MUX_inst|DIVISOR_10MHz_inst|clock_out~0_combout\ $end
+$var wire 1 e" \control_inst|MUX_inst|DIVISOR_10MHz_inst|clock_out~feeder_combout\ $end
+$var wire 1 f" \control_inst|MUX_inst|DIVISOR_10MHz_inst|clock_out~q\ $end
+$var wire 1 g" \control_inst|MUX_inst|clock_saida~0_combout\ $end
+$var wire 1 h" \control_inst|MUX_inst|clock_saida~combout\ $end
+$var wire 1 i" \control_inst|MUX_inst|clock_saida~clkctrl_outclk\ $end
+$var wire 1 j" \contador_inst|Add0~0_combout\ $end
+$var wire 1 k" \contador_inst|Add0~1\ $end
+$var wire 1 l" \contador_inst|Add0~2_combout\ $end
+$var wire 1 m" \contador_inst|cont4~1_combout\ $end
+$var wire 1 n" \contador_inst|Add0~3\ $end
+$var wire 1 o" \contador_inst|Add0~4_combout\ $end
+$var wire 1 p" \contador_inst|Add0~5\ $end
+$var wire 1 q" \contador_inst|Add0~6_combout\ $end
+$var wire 1 r" \contador_inst|cont4~2_combout\ $end
+$var wire 1 s" \contador_inst|Add0~7\ $end
+$var wire 1 t" \contador_inst|Add0~8_combout\ $end
+$var wire 1 u" \contador_inst|Add0~9\ $end
+$var wire 1 v" \contador_inst|Add0~10_combout\ $end
+$var wire 1 w" \contador_inst|Add0~11\ $end
+$var wire 1 x" \contador_inst|Add0~12_combout\ $end
+$var wire 1 y" \contador_inst|Add0~13\ $end
+$var wire 1 z" \contador_inst|Add0~14_combout\ $end
+$var wire 1 {" \contador_inst|Add0~15\ $end
+$var wire 1 |" \contador_inst|Add0~16_combout\ $end
+$var wire 1 }" \contador_inst|Equal0~8_combout\ $end
+$var wire 1 ~" \contador_inst|Equal0~9_combout\ $end
+$var wire 1 !# \contador_inst|Add0~17\ $end
+$var wire 1 "# \contador_inst|Add0~18_combout\ $end
+$var wire 1 ## \contador_inst|Add0~19\ $end
+$var wire 1 $# \contador_inst|Add0~20_combout\ $end
+$var wire 1 %# \contador_inst|Add0~21\ $end
+$var wire 1 &# \contador_inst|Add0~22_combout\ $end
+$var wire 1 '# \contador_inst|Add0~23\ $end
+$var wire 1 (# \contador_inst|Add0~24_combout\ $end
+$var wire 1 )# \contador_inst|Equal0~6_combout\ $end
+$var wire 1 *# \contador_inst|Add0~25\ $end
+$var wire 1 +# \contador_inst|Add0~26_combout\ $end
+$var wire 1 ,# \contador_inst|Add0~27\ $end
+$var wire 1 -# \contador_inst|Add0~28_combout\ $end
+$var wire 1 .# \contador_inst|Add0~29\ $end
+$var wire 1 /# \contador_inst|Add0~30_combout\ $end
+$var wire 1 0# \contador_inst|Add0~31\ $end
+$var wire 1 1# \contador_inst|Add0~32_combout\ $end
+$var wire 1 2# \contador_inst|Equal0~5_combout\ $end
+$var wire 1 3# \contador_inst|Equal0~7_combout\ $end
+$var wire 1 4# \contador_inst|Add0~33\ $end
+$var wire 1 5# \contador_inst|Add0~34_combout\ $end
+$var wire 1 6# \contador_inst|Add0~35\ $end
+$var wire 1 7# \contador_inst|Add0~36_combout\ $end
+$var wire 1 8# \contador_inst|Add0~37\ $end
+$var wire 1 9# \contador_inst|Add0~38_combout\ $end
+$var wire 1 :# \contador_inst|Add0~39\ $end
+$var wire 1 ;# \contador_inst|Add0~40_combout\ $end
+$var wire 1 <# \contador_inst|Add0~41\ $end
+$var wire 1 =# \contador_inst|Add0~42_combout\ $end
+$var wire 1 ># \contador_inst|Add0~43\ $end
+$var wire 1 ?# \contador_inst|Add0~44_combout\ $end
+$var wire 1 @# \contador_inst|Add0~45\ $end
+$var wire 1 A# \contador_inst|Add0~46_combout\ $end
+$var wire 1 B# \contador_inst|Add0~47\ $end
+$var wire 1 C# \contador_inst|Add0~48_combout\ $end
+$var wire 1 D# \contador_inst|Add0~49\ $end
+$var wire 1 E# \contador_inst|Add0~50_combout\ $end
+$var wire 1 F# \contador_inst|Add0~51\ $end
+$var wire 1 G# \contador_inst|Add0~52_combout\ $end
+$var wire 1 H# \contador_inst|Add0~53\ $end
+$var wire 1 I# \contador_inst|Add0~54_combout\ $end
+$var wire 1 J# \contador_inst|Add0~55\ $end
+$var wire 1 K# \contador_inst|Add0~56_combout\ $end
+$var wire 1 L# \contador_inst|Equal0~1_combout\ $end
+$var wire 1 M# \contador_inst|Add0~57\ $end
+$var wire 1 N# \contador_inst|Add0~58_combout\ $end
+$var wire 1 O# \contador_inst|Add0~59\ $end
+$var wire 1 P# \contador_inst|Add0~60_combout\ $end
+$var wire 1 Q# \contador_inst|Add0~61\ $end
+$var wire 1 R# \contador_inst|Add0~62_combout\ $end
+$var wire 1 S# \contador_inst|Equal0~0_combout\ $end
+$var wire 1 T# \contador_inst|Equal0~3_combout\ $end
+$var wire 1 U# \contador_inst|Equal0~2_combout\ $end
+$var wire 1 V# \contador_inst|Equal0~4_combout\ $end
+$var wire 1 W# \contador_inst|Equal0~10_combout\ $end
+$var wire 1 X# \contador_inst|cont4~0_combout\ $end
+$var wire 1 Y# \contador_inst|cont4\ [31] $end
+$var wire 1 Z# \contador_inst|cont4\ [30] $end
+$var wire 1 [# \contador_inst|cont4\ [29] $end
+$var wire 1 \# \contador_inst|cont4\ [28] $end
+$var wire 1 ]# \contador_inst|cont4\ [27] $end
+$var wire 1 ^# \contador_inst|cont4\ [26] $end
+$var wire 1 _# \contador_inst|cont4\ [25] $end
+$var wire 1 `# \contador_inst|cont4\ [24] $end
+$var wire 1 a# \contador_inst|cont4\ [23] $end
+$var wire 1 b# \contador_inst|cont4\ [22] $end
+$var wire 1 c# \contador_inst|cont4\ [21] $end
+$var wire 1 d# \contador_inst|cont4\ [20] $end
+$var wire 1 e# \contador_inst|cont4\ [19] $end
+$var wire 1 f# \contador_inst|cont4\ [18] $end
+$var wire 1 g# \contador_inst|cont4\ [17] $end
+$var wire 1 h# \contador_inst|cont4\ [16] $end
+$var wire 1 i# \contador_inst|cont4\ [15] $end
+$var wire 1 j# \contador_inst|cont4\ [14] $end
+$var wire 1 k# \contador_inst|cont4\ [13] $end
+$var wire 1 l# \contador_inst|cont4\ [12] $end
+$var wire 1 m# \contador_inst|cont4\ [11] $end
+$var wire 1 n# \contador_inst|cont4\ [10] $end
+$var wire 1 o# \contador_inst|cont4\ [9] $end
+$var wire 1 p# \contador_inst|cont4\ [8] $end
+$var wire 1 q# \contador_inst|cont4\ [7] $end
+$var wire 1 r# \contador_inst|cont4\ [6] $end
+$var wire 1 s# \contador_inst|cont4\ [5] $end
+$var wire 1 t# \contador_inst|cont4\ [4] $end
+$var wire 1 u# \contador_inst|cont4\ [3] $end
+$var wire 1 v# \contador_inst|cont4\ [2] $end
+$var wire 1 w# \contador_inst|cont4\ [1] $end
+$var wire 1 x# \contador_inst|cont4\ [0] $end
+$var wire 1 y# \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [25] $end
+$var wire 1 z# \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [24] $end
+$var wire 1 {# \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [23] $end
+$var wire 1 |# \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [22] $end
+$var wire 1 }# \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [21] $end
+$var wire 1 ~# \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [20] $end
+$var wire 1 !$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [19] $end
+$var wire 1 "$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [18] $end
+$var wire 1 #$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [17] $end
+$var wire 1 $$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [16] $end
+$var wire 1 %$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [15] $end
+$var wire 1 &$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [14] $end
+$var wire 1 '$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [13] $end
+$var wire 1 ($ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [12] $end
+$var wire 1 )$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [11] $end
+$var wire 1 *$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [10] $end
+$var wire 1 +$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [9] $end
+$var wire 1 ,$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [8] $end
+$var wire 1 -$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [7] $end
+$var wire 1 .$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [6] $end
+$var wire 1 /$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [5] $end
+$var wire 1 0$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [4] $end
+$var wire 1 1$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [3] $end
+$var wire 1 2$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [2] $end
+$var wire 1 3$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [1] $end
+$var wire 1 4$ \control_inst|MUX_inst|DIVISOR_50MHz_inst|counter\ [0] $end
+$var wire 1 5$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [24] $end
+$var wire 1 6$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [23] $end
+$var wire 1 7$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [22] $end
+$var wire 1 8$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [21] $end
+$var wire 1 9$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [20] $end
+$var wire 1 :$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [19] $end
+$var wire 1 ;$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [18] $end
+$var wire 1 <$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [17] $end
+$var wire 1 =$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [16] $end
+$var wire 1 >$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [15] $end
+$var wire 1 ?$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [14] $end
+$var wire 1 @$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [13] $end
+$var wire 1 A$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [12] $end
+$var wire 1 B$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [11] $end
+$var wire 1 C$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [10] $end
+$var wire 1 D$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [9] $end
+$var wire 1 E$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [8] $end
+$var wire 1 F$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [7] $end
+$var wire 1 G$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [6] $end
+$var wire 1 H$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [5] $end
+$var wire 1 I$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [4] $end
+$var wire 1 J$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [3] $end
+$var wire 1 K$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [2] $end
+$var wire 1 L$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [1] $end
+$var wire 1 M$ \control_inst|MUX_inst|DIVISOR_25MHz_inst|counter\ [0] $end
+$var wire 1 N$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [23] $end
+$var wire 1 O$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [22] $end
+$var wire 1 P$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [21] $end
+$var wire 1 Q$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [20] $end
+$var wire 1 R$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [19] $end
+$var wire 1 S$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [18] $end
+$var wire 1 T$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [17] $end
+$var wire 1 U$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [16] $end
+$var wire 1 V$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [15] $end
+$var wire 1 W$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [14] $end
+$var wire 1 X$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [13] $end
+$var wire 1 Y$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [12] $end
+$var wire 1 Z$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [11] $end
+$var wire 1 [$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [10] $end
+$var wire 1 \$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [9] $end
+$var wire 1 ]$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [8] $end
+$var wire 1 ^$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [7] $end
+$var wire 1 _$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [6] $end
+$var wire 1 `$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [5] $end
+$var wire 1 a$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [4] $end
+$var wire 1 b$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [3] $end
+$var wire 1 c$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [2] $end
+$var wire 1 d$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [1] $end
+$var wire 1 e$ \control_inst|MUX_inst|DIVISOR_10MHz_inst|counter\ [0] $end
+$var wire 1 f$ \ALT_INV_reset_top~inputclkctrl_outclk\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0(
+1)
+x*
+1+
+1,
+1-
+1.
+1/
+10
+01
+02
+03
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+1R
+0S
+1T
+1U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+1^
+0_
+0`
+0a
+0b
+1c
+1d
+0e
+0f
+0g
+1h
+0i
+0j
+0k
+0l
+1m
+0n
+1o
+0p
+0q
+1r
+0s
+0t
+0u
+1v
+0w
+0x
+0y
+0z
+0{
+1|
+0}
+0~
+0!!
+0"!
+0#!
+1$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+1.!
+0/!
+00!
+01!
+02!
+13!
+04!
+05!
+06!
+07!
+08!
+19!
+0:!
+0;!
+0<!
+0=!
+0>!
+1?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+1G!
+0H!
+0I!
+0J!
+1K!
+0L!
+0M!
+1N!
+1O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+1U!
+0V!
+0W!
+0X!
+1Y!
+0Z!
+0[!
+0\!
+1]!
+0^!
+0_!
+0`!
+0a!
+0b!
+1c!
+0d!
+0e!
+0f!
+0g!
+0h!
+1i!
+0j!
+0k!
+1l!
+0m!
+0n!
+0o!
+0p!
+1q!
+0r!
+0s!
+0t!
+0u!
+0v!
+1w!
+0x!
+0y!
+0z!
+0{!
+0|!
+1}!
+0~!
+0!"
+0""
+0#"
+0$"
+0%"
+1&"
+0'"
+0("
+0)"
+0*"
+0+"
+0,"
+0-"
+0."
+1/"
+00"
+11"
+02"
+13"
+04"
+15"
+06"
+07"
+08"
+09"
+1:"
+0;"
+0<"
+0="
+0>"
+0?"
+1@"
+0A"
+0B"
+1C"
+0D"
+0E"
+0F"
+1G"
+0H"
+0I"
+0J"
+0K"
+1L"
+0M"
+0N"
+0O"
+1P"
+0Q"
+0R"
+0S"
+0T"
+0U"
+1V"
+0W"
+0X"
+0Y"
+1Z"
+0["
+0\"
+0]"
+0^"
+0_"
+0`"
+0a"
+0b"
+0c"
+0d"
+0e"
+0f"
+1g"
+0h"
+0i"
+1j"
+0k"
+0l"
+0m"
+1n"
+0o"
+0p"
+0q"
+0r"
+1s"
+0t"
+0u"
+0v"
+1w"
+0x"
+0y"
+0z"
+1{"
+0|"
+1}"
+0~"
+0!#
+0"#
+1##
+0$#
+0%#
+0&#
+1'#
+0(#
+1)#
+0*#
+0+#
+1,#
+0-#
+0.#
+0/#
+10#
+01#
+12#
+13#
+04#
+05#
+16#
+07#
+08#
+09#
+1:#
+0;#
+0<#
+0=#
+1>#
+0?#
+0@#
+0A#
+1B#
+0C#
+0D#
+0E#
+1F#
+0G#
+0H#
+0I#
+1J#
+0K#
+1L#
+0M#
+0N#
+1O#
+0P#
+0Q#
+0R#
+1S#
+1T#
+1U#
+1V#
+0W#
+1X#
+1f$
+04
+05
+06
+07
+0Y#
+0Z#
+0[#
+0\#
+0]#
+0^#
+0_#
+0`#
+0a#
+0b#
+0c#
+0d#
+0e#
+0f#
+0g#
+0h#
+0i#
+0j#
+0k#
+0l#
+0m#
+0n#
+0o#
+0p#
+0q#
+0r#
+0s#
+0t#
+0u#
+0v#
+0w#
+0x#
+0y#
+0z#
+0{#
+0|#
+0}#
+0~#
+0!$
+0"$
+0#$
+0$$
+0%$
+0&$
+0'$
+0($
+0)$
+0*$
+0+$
+0,$
+0-$
+0.$
+0/$
+00$
+01$
+02$
+03$
+04$
+05$
+06$
+07$
+08$
+09$
+0:$
+0;$
+0<$
+0=$
+0>$
+0?$
+0@$
+0A$
+0B$
+0C$
+0D$
+0E$
+0F$
+0G$
+xH$
+xI$
+xJ$
+xK$
+xL$
+xM$
+0N$
+0O$
+0P$
+0Q$
+0R$
+0S$
+0T$
+0U$
+0V$
+0W$
+0X$
+0Y$
+0Z$
+0[$
+0\$
+0]$
+0^$
+x_$
+x`$
+xa$
+xb$
+xc$
+xd$
+xe$
+18
+19
+1:
+0;
+1@
+1A
+1B
+0C
+1D
+1E
+1F
+0G
+1<
+1=
+1>
+0?
+0$
+0%
+0&
+0'
+$end
+#5000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#10000
+0"
+03
+0\
+0G
+0]
+#15000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#20000
+0"
+03
+0\
+0G
+0]
+#25000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#30000
+0"
+03
+0\
+0G
+0]
+#35000
+1"
+13
+1\
+1G
+1b
+0a
+1h"
+1]
+1?
+04$
+03$
+12$
+1i"
+0e
+1f
+0m
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+1g
+1x#
+0j"
+1k"
+0S#
+0g
+0V#
+1l"
+0X#
+1H
+1m"
+17
+1'
+#40000
+0"
+03
+0\
+0G
+0]
+#45000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#50000
+0"
+03
+0\
+0G
+0]
+#55000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+1g
+1e
+0f
+0g
+#60000
+0"
+03
+0\
+0G
+0]
+#65000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1g
+#70000
+0"
+03
+0\
+0G
+0]
+#75000
+1"
+13
+1\
+1G
+0b
+1a
+0h"
+1]
+0?
+04$
+03$
+02$
+11$
+0i"
+0g
+0h
+1n
+12"
+1e
+0f
+1m
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+02"
+0n
+1g
+1h
+1i
+0i
+#80000
+0"
+03
+0\
+0G
+0]
+#85000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#90000
+0"
+03
+0\
+0G
+0]
+#95000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#100000
+0"
+03
+0\
+0G
+0]
+#105000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#110000
+0"
+03
+0\
+0G
+0]
+#115000
+1"
+13
+1\
+1G
+1b
+0a
+1h"
+1]
+1?
+04$
+03$
+12$
+1i"
+0e
+1f
+0m
+1+!
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+12"
+1n
+0g
+0h
+1w#
+0x#
+1j"
+0k"
+1S#
+0l"
+0n"
+1i
+1g
+1h
+0n
+02"
+0i
+1o"
+0m"
+1V#
+1l"
+1n"
+1X#
+0H
+1I
+0o"
+1m"
+07
+16
+0'
+1&
+#120000
+0"
+03
+0\
+0G
+0]
+#125000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#130000
+0"
+03
+0\
+0G
+0]
+#135000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+0g
+0h
+1e
+0f
+1g
+1h
+1i
+0i
+#140000
+0"
+03
+0\
+0G
+0]
+#145000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1n
+12"
+0g
+0h
+1i
+#150000
+0"
+03
+0\
+0G
+0]
+#155000
+1"
+13
+1\
+1G
+0b
+1a
+0h"
+1]
+0?
+04$
+03$
+02$
+01$
+10$
+0i"
+0i
+1j
+0o
+03"
+1g
+1h
+0n
+02"
+1e
+0f
+1m
+0+!
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+0g
+13"
+1o
+1i
+0j
+1k
+0k
+#160000
+0"
+03
+0\
+0G
+0]
+#165000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#170000
+0"
+03
+0\
+0G
+0]
+#175000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#180000
+0"
+03
+0\
+0G
+0]
+#185000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#190000
+0"
+03
+0\
+0G
+0]
+#195000
+1"
+13
+1\
+1G
+1b
+0a
+1h"
+1]
+1?
+04$
+03$
+12$
+1i"
+0e
+1f
+0m
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+1g
+1x#
+0j"
+1k"
+0S#
+0g
+0V#
+0l"
+0n"
+0X#
+1H
+1o"
+0m"
+17
+1'
+#200000
+0"
+03
+0\
+0G
+0]
+#205000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#210000
+0"
+03
+0\
+0G
+0]
+#215000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+1g
+1e
+0f
+0g
+#220000
+0"
+03
+0\
+0G
+0]
+#225000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1g
+#230000
+0"
+03
+0\
+0G
+0]
+#235000
+1"
+13
+1\
+1G
+0b
+1a
+0h"
+1]
+0?
+04$
+03$
+02$
+11$
+0i"
+0g
+0h
+1n
+12"
+1e
+0f
+1m
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+02"
+0n
+1g
+1h
+03"
+0o
+0i
+1j
+1k
+1i
+0j
+1o
+13"
+0k
+#240000
+0"
+03
+0\
+0G
+0]
+#245000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#250000
+0"
+03
+0\
+0G
+0]
+#255000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#260000
+0"
+1!
+03
+11
+1L
+0\
+1;
+0G
+0]
+1M
+1S
+1V
+1W
+0T
+0U
+#265000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#270000
+0"
+03
+0\
+0G
+0]
+#275000
+1"
+13
+1\
+1G
+1b
+0a
+1h"
+1]
+1?
+04$
+03$
+12$
+1i"
+0e
+1f
+0m
+1+!
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+12"
+1n
+0g
+0h
+0w#
+1v#
+0x#
+1j"
+0k"
+1S#
+0o"
+1p"
+1l"
+1n"
+0i
+1j
+0o
+03"
+1g
+1h
+0n
+02"
+13"
+1o
+1i
+0j
+1k
+1o"
+0p"
+1m"
+1q"
+1V#
+0l"
+1X#
+0H
+1J
+0I
+0m"
+1r"
+0q"
+0k
+07
+15
+06
+0'
+0&
+1%
+0r"
+#280000
+0"
+03
+0\
+0G
+0]
+#285000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#290000
+0"
+03
+0\
+0G
+0]
+#295000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+0g
+0h
+1e
+0f
+1g
+1h
+0i
+1j
+1k
+1i
+0j
+0k
+#300000
+0"
+03
+0\
+0G
+0]
+#305000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1n
+12"
+03"
+0o
+0g
+0h
+0i
+1j
+1k
+#310000
+0"
+03
+0\
+0G
+0]
+#315000
+1"
+13
+1\
+1G
+0b
+1a
+0h"
+1]
+0?
+04$
+03$
+02$
+01$
+00$
+1/$
+0i"
+0k
+0O!
+1p
+14"
+1i
+0j
+1o
+13"
+1g
+1h
+0n
+02"
+1e
+0f
+1m
+0+!
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+0g
+0i
+04"
+0p
+1k
+1O!
+1q
+1P!
+1F!
+0P!
+0q
+0F!
+#320000
+0"
+0!
+03
+01
+0L
+0\
+0;
+0G
+0]
+0M
+#325000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#330000
+0"
+1!
+03
+11
+1L
+0\
+1;
+0G
+1X
+1Y
+1[
+0c
+0]
+1M
+0V
+0W
+#335000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#340000
+0"
+03
+0\
+0G
+0]
+#345000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#350000
+0"
+03
+0\
+0G
+0]
+#355000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+1g
+0g
+#360000
+0"
+03
+0\
+0G
+0]
+#365000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#370000
+0"
+03
+0\
+0G
+0]
+#375000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+1g
+1e
+0f
+0g
+#380000
+0"
+03
+0\
+0G
+0]
+#385000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1g
+#390000
+0"
+0!
+03
+01
+0L
+0\
+0;
+0G
+0]
+0M
+#395000
+1"
+13
+1\
+1G
+0b
+1a
+1]
+04$
+03$
+02$
+11$
+0g
+0h
+1n
+12"
+1e
+0f
+1m
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+02"
+0n
+1g
+1h
+1i
+0i
+#400000
+0"
+03
+0\
+0G
+0]
+#405000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#410000
+0"
+03
+0\
+0G
+0]
+#415000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#420000
+0"
+03
+0\
+0G
+0]
+#425000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#430000
+0"
+03
+0\
+0G
+0]
+#435000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+1+!
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+12"
+1n
+0g
+0h
+1i
+1g
+1h
+0n
+02"
+0i
+#440000
+0"
+03
+0\
+0G
+0]
+#445000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#450000
+0"
+03
+0\
+0G
+0]
+#455000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+0g
+0h
+1e
+0f
+1g
+1h
+1i
+0i
+#460000
+0"
+03
+0\
+0G
+0]
+#465000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1n
+12"
+0g
+0h
+1i
+#470000
+0"
+03
+0\
+0G
+0]
+#475000
+1"
+13
+1\
+1G
+0b
+1a
+1]
+04$
+03$
+02$
+01$
+10$
+0i
+1j
+0o
+03"
+1g
+1h
+0n
+02"
+1e
+0f
+1m
+0+!
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+0g
+13"
+1o
+1i
+0j
+14"
+1p
+0k
+0O!
+1P!
+1q
+1k
+1O!
+0p
+04"
+0q
+0P!
+1F!
+0F!
+#480000
+0"
+03
+0\
+0G
+0]
+#485000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#490000
+0"
+03
+0\
+0G
+0]
+#495000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#500000
+0"
+03
+0\
+0G
+0]
+#505000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+1*!
+10"
+0`
+0d
+1e
+#510000
+0"
+03
+0\
+0G
+0]
+#515000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+0*!
+00"
+11"
+1m
+0`
+1e
+0f
+1g
+0g
+#520000
+0"
+03
+0\
+0G
+0]
+#525000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#530000
+0"
+03
+0\
+0G
+0]
+#535000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+1g
+1e
+0f
+0g
+#540000
+0"
+03
+0\
+0G
+0]
+#545000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+1*!
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1g
+#550000
+0"
+03
+0\
+0G
+0]
+#555000
+1"
+13
+1\
+1G
+0b
+1a
+1]
+04$
+03$
+02$
+11$
+0g
+0h
+1n
+12"
+1e
+0f
+1m
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+0*!
+00"
+0`
+0e
+02"
+0n
+1g
+1h
+03"
+0o
+0i
+1j
+0k
+0O!
+1p
+14"
+1i
+0j
+1o
+13"
+04"
+0p
+1k
+1O!
+1q
+1P!
+1F!
+0P!
+0q
+0F!
+#560000
+0"
+03
+0\
+0G
+0]
+#565000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#570000
+0"
+03
+0\
+0G
+0]
+#575000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#580000
+0"
+03
+0\
+0G
+0]
+#585000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+1*!
+10"
+0`
+0d
+1e
+#590000
+0"
+03
+0\
+0G
+0]
+#595000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+1+!
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+0*!
+00"
+11"
+1m
+0`
+1e
+0f
+12"
+1n
+0g
+0h
+0i
+1j
+0o
+03"
+1g
+1h
+0n
+02"
+13"
+1o
+1i
+0j
+14"
+1p
+0k
+0O!
+1P!
+1q
+1k
+1O!
+0p
+04"
+0q
+0P!
+1F!
+0F!
+#600000
+0"
+03
+0\
+0G
+0]
+#605000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#610000
+0"
+03
+0\
+0G
+0]
+#615000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+0g
+0h
+1e
+0f
+1g
+1h
+0i
+1j
+0k
+0O!
+1i
+0j
+1k
+1O!
+1P!
+0P!
+#620000
+0"
+03
+0\
+0G
+0]
+#625000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+1*!
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1n
+12"
+03"
+0o
+0g
+0h
+0i
+1j
+1p
+14"
+1q
+0k
+0O!
+1P!
+1F!
+#630000
+0"
+03
+0\
+0G
+0]
+#635000
+1"
+13
+1\
+1G
+0b
+1a
+1]
+04$
+03$
+02$
+01$
+00$
+0/$
+1G$
+1.$
+0P!
+1R!
+05"
+0q
+0G!
+0K!
+1k
+1O!
+0p
+04"
+1i
+0j
+1o
+13"
+1g
+1h
+0n
+02"
+1e
+0f
+1m
+0+!
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+0*!
+00"
+0`
+0e
+0g
+0i
+0k
+15"
+1q
+1G!
+1P!
+0R!
+1H!
+0F!
+16"
+1S!
+1T!
+17"
+0S!
+0H!
+1F!
+06"
+07"
+0T!
+#640000
+0"
+03
+0\
+0G
+0]
+#645000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#650000
+0"
+03
+0\
+0G
+0]
+#655000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#660000
+0"
+03
+0\
+0G
+0]
+#665000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#670000
+0"
+03
+0\
+0G
+0]
+#675000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+1g
+0g
+#680000
+0"
+03
+0\
+0G
+0]
+#685000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#690000
+0"
+03
+0\
+0G
+0]
+#695000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+1g
+1e
+0f
+0g
+#700000
+0"
+03
+0\
+0G
+0]
+#705000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1g
+#710000
+0"
+03
+0\
+0G
+0]
+#715000
+1"
+13
+1\
+1G
+0b
+1a
+1]
+04$
+03$
+02$
+11$
+0g
+0h
+1n
+12"
+1e
+0f
+1m
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+02"
+0n
+1g
+1h
+1i
+0i
+#720000
+0"
+03
+0\
+0G
+0]
+#725000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#730000
+0"
+03
+0\
+0G
+0]
+#735000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#740000
+0"
+03
+0\
+0G
+0]
+#745000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#750000
+0"
+03
+0\
+0G
+0]
+#755000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+1+!
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+12"
+1n
+0g
+0h
+1i
+1g
+1h
+0n
+02"
+0i
+#760000
+0"
+03
+0\
+0G
+0]
+#765000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#770000
+0"
+03
+0\
+0G
+0]
+#775000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+0g
+0h
+1e
+0f
+1g
+1h
+1i
+0i
+#780000
+0"
+03
+0\
+0G
+0]
+#785000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1n
+12"
+0g
+0h
+1i
+#790000
+0"
+03
+0\
+0G
+0]
+#795000
+1"
+13
+1\
+1G
+0b
+1a
+1]
+04$
+03$
+02$
+01$
+10$
+0i
+1j
+0o
+03"
+1g
+1h
+0n
+02"
+1e
+0f
+1m
+0+!
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+0g
+13"
+1o
+1i
+0j
+1k
+0k
+#800000
+0"
+03
+0\
+0G
+0]
+#805000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#810000
+0"
+03
+0\
+0G
+0]
+#815000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#820000
+0"
+03
+0\
+0G
+0]
+#825000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#830000
+0"
+03
+0\
+0G
+0]
+#835000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+1g
+0g
+#840000
+0"
+03
+0\
+0G
+0]
+#845000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#850000
+0"
+03
+0\
+0G
+0]
+#855000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+1g
+1e
+0f
+0g
+#860000
+0"
+03
+0\
+0G
+0]
+#865000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1g
+#870000
+0"
+03
+0\
+0G
+0]
+#875000
+1"
+13
+1\
+1G
+0b
+1a
+1]
+04$
+03$
+02$
+11$
+0g
+0h
+1n
+12"
+1e
+0f
+1m
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+02"
+0n
+1g
+1h
+03"
+0o
+0i
+1j
+1k
+1i
+0j
+1o
+13"
+0k
+#880000
+0"
+03
+0\
+0G
+0]
+#885000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#890000
+0"
+03
+0\
+0G
+0]
+#895000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#900000
+0"
+03
+0\
+0G
+0]
+#905000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#910000
+0"
+03
+0\
+0G
+0]
+#915000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+1+!
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+12"
+1n
+0g
+0h
+0i
+1j
+0o
+03"
+1g
+1h
+0n
+02"
+13"
+1o
+1i
+0j
+1k
+0k
+#920000
+0"
+03
+0\
+0G
+0]
+#925000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#930000
+0"
+03
+0\
+0G
+0]
+#935000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+0e
+1f
+0g
+0h
+1e
+0f
+1g
+1h
+0i
+1j
+1k
+1i
+0j
+0k
+#940000
+0"
+03
+0\
+0G
+0]
+#945000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+0a
+1l
+10"
+01"
+0m
+0`
+0d
+0e
+1f
+1n
+12"
+03"
+0o
+0g
+0h
+0i
+1j
+1k
+#950000
+0"
+03
+0\
+0G
+0]
+#955000
+1"
+13
+1\
+1G
+0b
+1a
+1]
+04$
+03$
+02$
+01$
+00$
+1/$
+0k
+0O!
+1p
+14"
+1i
+0j
+1o
+13"
+1g
+1h
+0n
+02"
+1e
+0f
+1m
+0+!
+11"
+1`
+1d
+1^
+0_
+0a
+0l
+00"
+0`
+0e
+0g
+0i
+04"
+0p
+1k
+1O!
+05"
+0q
+0G!
+0P!
+1R!
+1S!
+1H!
+0F!
+16"
+1P!
+0R!
+1q
+1G!
+15"
+06"
+0H!
+1F!
+0S!
+17"
+1T!
+0T!
+07"
+#960000
+0"
+03
+0\
+0G
+0]
+#965000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1`
+#970000
+0"
+03
+0\
+0G
+0]
+#975000
+1"
+13
+1\
+1G
+1]
+04$
+13$
+0`
+0d
+1^
+0_
+1`
+1d
+1e
+0e
+#980000
+0"
+03
+0\
+0G
+0]
+#985000
+1"
+13
+1\
+1G
+1]
+14$
+0^
+1_
+1a
+1l
+10"
+0`
+0d
+1e
+#990000
+0"
+03
+0\
+0G
+0]
+#995000
+1"
+13
+1\
+1G
+1b
+0a
+1]
+04$
+03$
+12$
+0e
+1f
+0m
+01"
+1`
+1d
+1^
+0_
+1a
+0l
+00"
+11"
+1m
+0`
+1e
+0f
+1g
+0g
+#1000000
