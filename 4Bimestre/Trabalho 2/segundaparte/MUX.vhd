@@ -70,7 +70,7 @@ begin
     processo_mux: process(entrada)
     begin
         -- Inicializa clock_saida como '0' por padrão
-        clock_saida <= '0';
+        --clock_saida <= '0';
 
         if entrada = "00" then
             clock_saida <= clock_saida_5;

@@ -15,6 +15,34 @@ saida_mux_7bit[3] << MUX4_1:MUX4_1_inst.saida[3]
 saida_mux_7bit[4] << MUX4_1:MUX4_1_inst.saida[4]
 saida_mux_7bit[5] << MUX4_1:MUX4_1_inst.saida[5]
 saida_mux_7bit[6] << MUX4_1:MUX4_1_inst.saida[6]
+saida_contador[0] << modulo_BCD:BCD_inst_D.saida[0]
+saida_contador[1] << modulo_BCD:BCD_inst_D.saida[1]
+saida_contador[2] << modulo_BCD:BCD_inst_D.saida[2]
+saida_contador[3] << modulo_BCD:BCD_inst_D.saida[3]
+saida_contador[4] << modulo_BCD:BCD_inst_D.saida[4]
+saida_contador[5] << modulo_BCD:BCD_inst_D.saida[5]
+saida_contador[6] << modulo_BCD:BCD_inst_D.saida[6]
+saida_contador[7] << modulo_BCD:BCD_inst_C.saida[0]
+saida_contador[8] << modulo_BCD:BCD_inst_C.saida[1]
+saida_contador[9] << modulo_BCD:BCD_inst_C.saida[2]
+saida_contador[10] << modulo_BCD:BCD_inst_C.saida[3]
+saida_contador[11] << modulo_BCD:BCD_inst_C.saida[4]
+saida_contador[12] << modulo_BCD:BCD_inst_C.saida[5]
+saida_contador[13] << modulo_BCD:BCD_inst_C.saida[6]
+saida_contador[14] << modulo_BCD:BCD_inst_B.saida[0]
+saida_contador[15] << modulo_BCD:BCD_inst_B.saida[1]
+saida_contador[16] << modulo_BCD:BCD_inst_B.saida[2]
+saida_contador[17] << modulo_BCD:BCD_inst_B.saida[3]
+saida_contador[18] << modulo_BCD:BCD_inst_B.saida[4]
+saida_contador[19] << modulo_BCD:BCD_inst_B.saida[5]
+saida_contador[20] << modulo_BCD:BCD_inst_B.saida[6]
+saida_contador[21] << modulo_BCD:BCD_inst_A.saida[0]
+saida_contador[22] << modulo_BCD:BCD_inst_A.saida[1]
+saida_contador[23] << modulo_BCD:BCD_inst_A.saida[2]
+saida_contador[24] << modulo_BCD:BCD_inst_A.saida[3]
+saida_contador[25] << modulo_BCD:BCD_inst_A.saida[4]
+saida_contador[26] << modulo_BCD:BCD_inst_A.saida[5]
+saida_contador[27] << modulo_BCD:BCD_inst_A.saida[6]
 
 
 |toplevel|contador:contador_inst
@@ -312,7 +340,7 @@ clock_MUX => DIVISOR_5MHz:DIVISOR_5MHz_inst.clock_in
 clock_MUX => DIVISOR_10MHz:DIVISOR_10MHz_inst.clock_in
 clock_MUX => DIVISOR_25MHz:DIVISOR_25MHz_inst.clock_in
 clock_MUX => DIVISOR_50MHz:DIVISOR_50MHz_inst.clock_in
-clock_saida <= clock_saida.DB_MAX_OUTPUT_PORT_TYPE
+clock_saida <= clock_saida$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |toplevel|control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst

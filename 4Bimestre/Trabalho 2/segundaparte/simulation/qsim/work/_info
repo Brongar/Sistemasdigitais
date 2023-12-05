@@ -227,14 +227,14 @@ R36
 R5
 R23
 Ehard_block
-Z37 w1701564787
+Z37 w1701701115
 R10
 R8
 R12
 R13
 R14
 R9
-R0
+Z38 dC:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/segundaparte/simulation/qsim
 R16
 R17
 l0
@@ -243,9 +243,9 @@ VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
 R18
 32
-Z38 !s110 1701564788
+Z39 !s110 1701701117
 !i10b 1
-Z39 !s108 1701564788.000000
+Z40 !s108 1701701117.000000
 R21
 R22
 !i113 1
@@ -265,16 +265,16 @@ Via>5o7W??azG@W@@eFOTF0
 !s100 [5;Wd8QGQ>@2NGoJ1I]Y43
 R18
 32
-R38
-!i10b 1
 R39
+!i10b 1
+R40
 R21
 R22
 !i113 1
 R5
 R23
 Etoplevel
-R37
+Z41 w1701728678
 R8
 R9
 R10
@@ -283,18 +283,18 @@ R12
 R13
 R14
 R15
-R0
+R38
 R16
 R17
 l0
-L80
-V^JA4b^ZmM><S9>U^A19i`0
-!s100 IT^EQMV8<3;^6SUKIdC=23
+L37
+VbGlYoe<o]>G@3:Mm5<M>;3
+!s100 9al=h4z>9ZoM@X[=9l?]F3
 R18
 32
-R38
+Z42 !s110 1701728681
 !i10b 1
-R39
+Z43 !s108 1701728681.000000
 R21
 R22
 !i113 1
@@ -309,57 +309,57 @@ R12
 R13
 R14
 R15
-DEx4 work 8 toplevel 0 22 ^JA4b^ZmM><S9>U^A19i`0
-l429
-L99
-VDW=8ICDej4HWKmBcNo]740
-!s100 _Jlj2Yc]Ci5j[dA3ChHzM2
+DEx4 work 8 toplevel 0 22 bGlYoe<o]>G@3:Mm5<M>;3
+l771
+L48
+Voa;ckz?ad2TkZk;PO1zzm2
+!s100 :_gPZXSCU>R3<K=4V=a9j0
 R18
 32
-R38
+R42
 !i10b 1
-R39
+R43
 R21
 R22
 !i113 1
 R5
 R23
 Etoplevel_vhd_vec_tst
-Z40 w1701564785
+Z44 w1701728676
 R13
 R14
-R0
-Z41 8Waveform7.vwf.vht
-Z42 FWaveform7.vwf.vht
+R38
+Z45 8Waveform4.vwf.vht
+Z46 FWaveform4.vwf.vht
 l0
 L32
 VZhGk;Of=R9Yb<1fPEhI7?0
 !s100 oKeX4McJeKg;Ri`6^F5mB1
 R18
 32
-R38
+R42
 !i10b 1
-R39
-Z43 !s90 -work|work|Waveform7.vwf.vht|
-Z44 !s107 Waveform7.vwf.vht|
+R43
+Z47 !s90 -work|work|Waveform4.vwf.vht|
+Z48 !s107 Waveform4.vwf.vht|
 !i113 1
 R5
 R23
 Atoplevel_arch
 R13
 R14
-Z45 DEx4 work 20 toplevel_vhd_vec_tst 0 22 ZhGk;Of=R9Yb<1fPEhI7?0
-l49
+Z49 DEx4 work 20 toplevel_vhd_vec_tst 0 22 ZhGk;Of=R9Yb<1fPEhI7?0
+l53
 L34
-Vm3SF?:R87@jG5OK<@iTT:2
-!s100 8f5^OBVnU@CWC=dILaGE72
+VjceYmVRGUElmB35ST4<RD1
+!s100 MWk`N9U=6GW^6^27?9f?U2
 R18
 32
-R38
+R42
 !i10b 1
-R39
 R43
-R44
+R47
+R48
 !i113 1
 R5
 R23

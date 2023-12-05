@@ -29,7 +29,7 @@ architecture comportamento_moore of control is
 begin 
 	 MUX_inst :   MUX port map(
                  entrada => saida,
-					  clock_mux => clock_De0nano,
+					  clock_MUX => clock_De0nano,
                  clock_saida => saida_clock_mux);
 
     -- processo para definição do sincronismo da FSM

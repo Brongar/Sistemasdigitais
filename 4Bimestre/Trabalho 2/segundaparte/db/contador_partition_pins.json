@@ -48,6 +48,118 @@
 					"strict" : false
 				},
 				{
+					"name" : "saida_contador[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[7]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[8]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[9]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[10]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[11]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[12]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[13]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[14]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[15]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[16]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[17]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[18]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[19]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[20]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[21]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[22]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[23]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[24]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[25]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[26]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_contador[27]",
+					"strict" : false
+				},
+				{
 					"name" : "reset_top",
 					"strict" : false
 				},

@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "12/02/2023 18:15:38"
+-- Generated on "12/04/2023 19:24:36"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          control
+-- Vhdl Test Bench(with test vectors) for design  :          toplevel
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,46 +29,62 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY control_vhd_vec_tst IS
-END control_vhd_vec_tst;
-ARCHITECTURE control_arch OF control_vhd_vec_tst IS
+ENTITY toplevel_vhd_vec_tst IS
+END toplevel_vhd_vec_tst;
+ARCHITECTURE toplevel_arch OF toplevel_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL reset : STD_LOGIC;
-SIGNAL saida : STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL seletor : STD_LOGIC;
-COMPONENT control
+SIGNAL botao_seletor : STD_LOGIC;
+SIGNAL clock_top : STD_LOGIC;
+SIGNAL reset_top : STD_LOGIC;
+SIGNAL saida_contador : STD_LOGIC_VECTOR(27 DOWNTO 0);
+SIGNAL saida_display : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL saida_mux_7bit : STD_LOGIC_VECTOR(6 DOWNTO 0);
+COMPONENT toplevel
 	PORT (
-	reset : IN STD_LOGIC;
-	saida : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-	seletor : IN STD_LOGIC
+	botao_seletor : IN STD_LOGIC;
+	clock_top : IN STD_LOGIC;
+	reset_top : IN STD_LOGIC;
+	saida_contador : BUFFER STD_LOGIC_VECTOR(27 DOWNTO 0);
+	saida_display : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
+	saida_mux_7bit : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : control
+	i1 : toplevel
 	PORT MAP (
 -- list connections between master ports and signals
-	reset => reset,
-	saida => saida,
-	seletor => seletor
+	botao_seletor => botao_seletor,
+	clock_top => clock_top,
+	reset_top => reset_top,
+	saida_contador => saida_contador,
+	saida_display => saida_display,
+	saida_mux_7bit => saida_mux_7bit
 	);
 
--- seletor
-t_prcs_seletor: PROCESS
+-- botao_seletor
+t_prcs_botao_seletor: PROCESS
+BEGIN
+	botao_seletor <= '0';
+WAIT;
+END PROCESS t_prcs_botao_seletor;
+
+-- clock_top
+t_prcs_clock_top: PROCESS
 BEGIN
 LOOP
-	seletor <= '0';
-	WAIT FOR 10000 ps;
-	seletor <= '1';
-	WAIT FOR 10000 ps;
+	clock_top <= '0';
+	WAIT FOR 1000 ps;
+	clock_top <= '1';
+	WAIT FOR 1000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_seletor;
+END PROCESS t_prcs_clock_top;
 
--- reset
-t_prcs_reset: PROCESS
+-- reset_top
+t_prcs_reset_top: PROCESS
 BEGIN
-	reset <= '0';
+	reset_top <= '0';
 WAIT;
-END PROCESS t_prcs_reset;
-END control_arch;
+END PROCESS t_prcs_reset_top;
+END toplevel_arch;

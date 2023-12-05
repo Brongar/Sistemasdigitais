@@ -32,19 +32,19 @@ begin
 			else
 				if rising_edge(clk) then
 					cont4 <= cont4 + 1;
-					if cont4 = 10 then
+					if cont4 = 9 then --10
 						cont4 <= 0;
 						cont3 <= cont3 + 1;
 						
-						if cont3 = 10 then
+						if cont3 = 9 then
 							cont3 <= 0;
 							cont2 <= cont2 + 1;
 						
-							if cont2 = 10 then
+							if cont2 = 9 then
 								cont2 <= 0;
 								cont1 <= cont1 + 1;
 								
-								if cont1 = 10 then
+								if cont1 = 9 then
 									cont1 <= 0;
 								end if;
 							end if;

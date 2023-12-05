@@ -5,7 +5,8 @@ entity toplevel is
     port (        
         botao_seletor, reset_top, clock_top : in std_logic;
         saida_display: out std_logic_vector(3 downto 0);
-        saida_mux_7bit: out std_logic_vector(6 downto 0)
+        saida_mux_7bit: out std_logic_vector(6 downto 0);
+		  saida_contador: out std_logic_vector(27 downto 0)
         --saida_teste: out std_logic_vector(3 downto 0)
     );
 end toplevel;
@@ -117,4 +118,5 @@ architecture top_level_arch of toplevel is
 				
 			saida_mux_7bit <= saida_mux_7;
 			saida_display  <= saida_4bits;
+			saida_contador <= A_7 & B_7 & C_7 & D_7;
  end top_level_arch;
