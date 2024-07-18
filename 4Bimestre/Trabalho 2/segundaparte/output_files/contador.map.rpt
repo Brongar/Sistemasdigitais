@@ -1,5 +1,5 @@
 Analysis & Synthesis report for contador
-Tue Dec 05 00:12:44 2023
+Tue Dec 05 13:41:46 2023
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -46,15 +46,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 05 00:12:44 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 05 13:41:46 2023       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; contador                                    ;
 ; Top-level Entity Name              ; toplevel                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 454                                         ;
-;     Total combinational functions  ; 450                                         ;
-;     Dedicated logic registers      ; 248                                         ;
-; Total registers                    ; 248                                         ;
+; Total logic elements               ; 422                                         ;
+;     Total combinational functions  ; 418                                         ;
+;     Dedicated logic registers      ; 233                                         ;
+; Total registers                    ; 233                                         ;
 ; Total pins                         ; 42                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -190,20 +190,20 @@ agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 454             ;
+; Estimated Total logic elements              ; 422             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 450             ;
+; Total combinational functions               ; 418             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 115             ;
+;     -- 4 input functions                    ; 111             ;
 ;     -- 3 input functions                    ; 12              ;
-;     -- <=2 input functions                  ; 323             ;
+;     -- <=2 input functions                  ; 295             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 205             ;
-;     -- arithmetic mode                      ; 245             ;
+;     -- normal mode                          ; 194             ;
+;     -- arithmetic mode                      ; 224             ;
 ;                                             ;                 ;
-; Total registers                             ; 248             ;
-;     -- Dedicated logic registers            ; 248             ;
+; Total registers                             ; 233             ;
+;     -- Dedicated logic registers            ; 233             ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
 ; I/O pins                                    ; 42              ;
@@ -212,8 +212,8 @@ agreement for further details.
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; reset_top~input ;
 ; Maximum fan-out                             ; 133             ;
-; Total fan-out                               ; 1937            ;
-; Average fan-out                             ; 2.48            ;
+; Total fan-out                               ; 1836            ;
+; Average fan-out                             ; 2.50            ;
 +---------------------------------------------+-----------------+
 
 
@@ -222,15 +222,15 @@ agreement for further details.
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Entity Name         ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                     ; 450 (0)             ; 248 (0)                   ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |toplevel                                                                    ; toplevel            ; work         ;
+; |toplevel                                     ; 418 (0)             ; 233 (0)                   ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |toplevel                                                                    ; toplevel            ; work         ;
 ;    |MUX4_1:MUX4_1_inst|                       ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|MUX4_1:MUX4_1_inst                                                 ; MUX4_1              ; work         ;
 ;    |contador:contador_inst|                   ; 182 (182)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|contador:contador_inst                                             ; contador            ; work         ;
-;    |control:control_inst|                     ; 171 (3)             ; 85 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst                                               ; control             ; work         ;
-;       |MUX:MUX_inst|                          ; 168 (3)             ; 80 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst|MUX:MUX_inst                                  ; MUX                 ; work         ;
+;    |control:control_inst|                     ; 139 (3)             ; 70 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst                                               ; control             ; work         ;
+;       |MUX:MUX_inst|                          ; 136 (3)             ; 65 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst|MUX:MUX_inst                                  ; MUX                 ; work         ;
 ;          |DIVISOR_10MHz:DIVISOR_10MHz_inst|   ; 38 (38)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst ; DIVISOR_10MHz       ; work         ;
-;          |DIVISOR_25Mhz:DIVISOR_25MHz_inst|   ; 44 (44)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst ; DIVISOR_25Mhz       ; work         ;
+;          |DIVISOR_25Mhz:DIVISOR_25MHz_inst|   ; 47 (47)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst ; DIVISOR_25Mhz       ; work         ;
 ;          |DIVISOR_50MHz:DIVISOR_50MHz_inst|   ; 45 (45)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst ; DIVISOR_50MHz       ; work         ;
-;          |DIVISOR_5MHz:DIVISOR_5MHz_inst|     ; 38 (38)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst   ; DIVISOR_5MHz        ; work         ;
+;          |DIVISOR_5MHz:DIVISOR_5MHz_inst|     ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst   ; DIVISOR_5MHz        ; work         ;
 ;    |controlador_display:Display_Control_inst| ; 52 (52)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|controlador_display:Display_Control_inst                           ; controlador_display ; work         ;
 ;    |modulo_BCD:BCD_inst_A|                    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|modulo_BCD:BCD_inst_A                                              ; modulo_BCD          ; work         ;
 ;    |modulo_BCD:BCD_inst_B|                    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |toplevel|modulo_BCD:BCD_inst_B                                              ; modulo_BCD          ; work         ;
@@ -259,29 +259,23 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
 ; Register name                                                                 ; Reason for Removal                                                                        ;
 +-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
-; control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[0]   ; Merged with controlador_display:Display_Control_inst|contador[0]                          ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[0] ; Merged with controlador_display:Display_Control_inst|contador[0]                          ;
 ; control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[0] ; Merged with controlador_display:Display_Control_inst|contador[0]                          ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[0] ; Merged with controlador_display:Display_Control_inst|contador[0]                          ;
 ; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[0] ; Merged with controlador_display:Display_Control_inst|contador[0]                          ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[1]   ; Merged with controlador_display:Display_Control_inst|contador[1]                          ;
 ; control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[1] ; Merged with controlador_display:Display_Control_inst|contador[1]                          ;
 ; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[1] ; Merged with controlador_display:Display_Control_inst|contador[1]                          ;
 ; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[1] ; Merged with controlador_display:Display_Control_inst|contador[1]                          ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[2] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[2]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[2] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[2]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[2] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[2]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[2]   ; Merged with controlador_display:Display_Control_inst|contador[2]                          ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[3] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[3]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[3] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[3]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[3] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[3]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[4] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[4]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[4] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[4]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[4] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[4]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[5] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[5]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[5] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[5]   ;
-; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[5] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_5MHz:DIVISOR_5MHz_inst|counter[5]   ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[2] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[2] ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[2] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[2] ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[2] ; Merged with controlador_display:Display_Control_inst|contador[2]                          ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[3] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[3] ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[3] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[3] ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[4] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[4] ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[4] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[4] ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[5] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[5] ;
+; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[5] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_25Mhz:DIVISOR_25MHz_inst|counter[5] ;
 ; control:control_inst|MUX:MUX_inst|DIVISOR_50MHz:DIVISOR_50MHz_inst|counter[6] ; Merged with control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|counter[6] ;
-; Total Number of Removed Registers = 22                                        ;                                                                                           ;
+; Total Number of Removed Registers = 16                                        ;                                                                                           ;
 +-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
 
 
@@ -290,7 +284,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 248   ;
+; Total registers                              ; 233   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 133   ;
@@ -305,7 +299,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |toplevel|MUX4_1:MUX4_1_inst|saida[2]          ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |toplevel|MUX4_1:MUX4_1_inst|saida[0]          ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |toplevel|modulo_BCD:BCD_inst_A|inter_saida[0] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |toplevel|modulo_BCD:BCD_inst_C|inter_saida[0] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |toplevel|modulo_BCD:BCD_inst_B|inter_saida[0] ;
@@ -319,22 +313,22 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 42                          ;
-; cycloneiii_ff         ; 248                         ;
+; cycloneiii_ff         ; 233                         ;
 ;     CLR               ; 37                          ;
 ;     ENA CLR           ; 96                          ;
-;     plain             ; 115                         ;
-; cycloneiii_lcell_comb ; 472                         ;
-;     arith             ; 245                         ;
-;         2 data inputs ; 241                         ;
-;         3 data inputs ; 4                           ;
-;     normal            ; 227                         ;
-;         1 data inputs ; 32                          ;
-;         2 data inputs ; 72                          ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 115                         ;
+;     plain             ; 100                         ;
+; cycloneiii_lcell_comb ; 440                         ;
+;     arith             ; 224                         ;
+;         2 data inputs ; 221                         ;
+;         3 data inputs ; 3                           ;
+;     normal            ; 216                         ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 65                          ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 111                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 3.48                        ;
+; Average LUT depth     ; 3.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -343,7 +337,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -353,7 +347,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Dec 05 00:12:22 2023
+    Info: Processing started: Tue Dec 05 13:41:13 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contador -c contador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -427,14 +421,14 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register contador:contador_inst|cont1[31] will power up to Low File: C:/Users/Akira/Documents/github/Sistemasdigitais/4bimestre/Trabalho 2/segundaparte/contador.vhd Line: 33
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 496 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 464 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 454 logic cells
+    Info (21061): Implemented 422 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Tue Dec 05 00:12:44 2023
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Tue Dec 05 13:41:46 2023
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:58
 
 

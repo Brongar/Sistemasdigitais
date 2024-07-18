@@ -3,40 +3,40 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock_top'
-Slack : -3.504
-TNS   : -223.606
+Slack : -3.689
+TNS   : -176.796
 
 Type  : Slow 1200mV 85C Model Setup 'control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|clock_out'
-Slack : -3.102
-TNS   : -325.279
+Slack : -3.243
+TNS   : -336.466
 
 Type  : Slow 1200mV 85C Model Setup 'botao_seletor'
-Slack : -0.010
-TNS   : -0.010
+Slack : 0.120
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'controlador_display:Display_Control_inst|b'
-Slack : 0.213
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_top'
+Slack : 0.347
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'controlador_display:Display_Control_inst|b'
 Slack : 0.357
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'clock_top'
-Slack : 0.382
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Hold 'botao_seletor'
-Slack : 0.404
+Slack : 0.390
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|clock_out'
-Slack : 0.479
+Slack : 0.480
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_top'
 Slack : -3.000
-TNS   : -116.000
+TNS   : -101.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'botao_seletor'
 Slack : -3.000
@@ -51,40 +51,40 @@ Slack : -1.000
 TNS   : -2.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock_top'
-Slack : -3.028
-TNS   : -186.171
+Slack : -3.256
+TNS   : -146.552
 
 Type  : Slow 1200mV 0C Model Setup 'control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|clock_out'
-Slack : -2.723
-TNS   : -280.713
+Slack : -2.803
+TNS   : -286.483
 
 Type  : Slow 1200mV 0C Model Setup 'botao_seletor'
-Slack : 0.102
+Slack : 0.211
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'controlador_display:Display_Control_inst|b'
-Slack : 0.295
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'controlador_display:Display_Control_inst|b'
-Slack : 0.313
+Slack : 0.301
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock_top'
-Slack : 0.333
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'controlador_display:Display_Control_inst|b'
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'botao_seletor'
-Slack : 0.368
+Slack : 0.347
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|clock_out'
-Slack : 0.427
+Slack : 0.428
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_top'
 Slack : -3.000
-TNS   : -116.000
+TNS   : -101.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'botao_seletor'
 Slack : -3.000
@@ -99,44 +99,44 @@ Slack : -1.000
 TNS   : -2.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock_top'
-Slack : -1.605
-TNS   : -80.404
+Slack : -1.671
+TNS   : -61.171
 
 Type  : Fast 1200mV 0C Model Setup 'control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|clock_out'
-Slack : -1.284
-TNS   : -128.095
+Slack : -1.420
+TNS   : -138.415
 
 Type  : Fast 1200mV 0C Model Setup 'botao_seletor'
-Slack : 0.443
+Slack : 0.519
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'controlador_display:Display_Control_inst|b'
-Slack : 0.560
+Slack : 0.567
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_top'
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'controlador_display:Display_Control_inst|b'
 Slack : 0.187
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clock_top'
-Slack : 0.201
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Hold 'botao_seletor'
-Slack : 0.213
+Slack : 0.204
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|clock_out'
-Slack : 0.254
+Slack : 0.255
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_top'
 Slack : -3.000
-TNS   : -122.244
+TNS   : -106.482
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'botao_seletor'
 Slack : -3.000
-TNS   : -8.840
+TNS   : -8.930
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'control:control_inst|MUX:MUX_inst|DIVISOR_10MHz:DIVISOR_10MHz_inst|clock_out'
 Slack : -1.000

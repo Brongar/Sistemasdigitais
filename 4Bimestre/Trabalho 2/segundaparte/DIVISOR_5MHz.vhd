@@ -9,8 +9,8 @@ entity DIVISOR_5MHz is
 end DIVISOR_5MHz;
 
 architecture DIVISOR_arch of DIVISOR_5MHz is
-    signal counter : integer range 0 to 4999999 := 0;  --4999999
-    signal prescaler : integer :=  5000000;  -- Prescaler para obter 1 Hz
+    signal counter : integer range 0 to 2 := 0;  --4999999
+    signal prescaler : integer :=  3;  -- Prescaler para obter 1 Hz
 begin
     process(clock_in)
     begin
